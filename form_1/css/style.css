@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/HelveticaNeueBoldCondensed.eot');
+    src: url('../font/HelveticaNeueBoldCondensed.eot');
+    src: url('../font/HelveticaNeueBoldCondensed.eot');
+    src: url('../font/HelveticaNeueBoldCondensed.eot');
+    src: local('Helvetica Neue Condensed Bold'), local('HelveticaNeueBoldCondensed'),
+        url('HelveticaNeueBoldCondensed.eot?#iefix') format('embedded-opentype'),
+        url('../font/HelveticaNeueBoldCondensed.woff2') format('woff2'),
+        url('../font/HelveticaNeueBoldCondensed.woff') format('woff'),
+        url('../font/HelveticaNeueBoldCondensed.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('HelveticaNeueCyr-Medium.eot');
+    src: local('HelveticaNeueCyr-Medium'),
+        url('HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+        url('../font/HelveticaNeueCyr-Medium.woff') format('woff'),
+        url('HelveticaNeueCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('HelveticaNeueCyr-Bold.eot');
+    src: local('HelveticaNeueCyr-Bold'),
+        url('HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('../font/HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #ffffff;
+    margin: 0;
+    color: #437182;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+}
+
+input {
+    margin: 0;
+}
+
+.container {
+    width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.container div {
+    position: relative;
+}
+
+
+input[type="text"],
+.select select{
+    width: 100%;
+    font: 12px 'HelveticaNeueCyr', sans-serif;
+    font-weight: 500;
+    height: 2.5em;
+    color: #437182;
+    border: 1px solid#c6dade;
+    border-radius: 4px;
+    -webkit-appearance: none;
+
+}
+
+input[type="text"]:focus,
+.select select:focus {
+    outline: none;
+    box-shadow: 0 0 4px 4px rgba(222, 240, 244,0.7);
+}
+
+.select:after {
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:1;
+	width:36px;
+	height:30px;
+    background: url(../images/arrow.png) no-repeat;
+	border-right: 1px solid#c6dade;
+	color:#aaa;
+    text-align:center;
+    border-radius: 0 4px 4px 0;
+}
+
+.checkbox,
+.radio,
+.button {
+    text-align: left;
+}
+
+.check {
+    overflow: hidden;
+}
+
+.checkbox {
+    float: left;
+    width:30%;
+    height: 1.3em;
+    outline: none;
+}
+
+.radio  {
+    overflow: hidden;
+}
+
+.radio div {
+    float: left;
+    width:30%;
+    height: 1.3em;
+    outline: none;
+}
+
+.checkbox input,
+.radio div input {
+    outline: none;
+}
+
+.checkbox input{
+    background: url(../images/checkbox-empty.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.checkbox input:checked {
+    background: url(../images/checkboxfull.png) no-repeat;
+}
+
+.radio input{
+    background: url(../images/radio.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.radio input:checked {
+    background: url(../images/radioactive.png) no-repeat;
+}
+
+
+button {
+    width: 50%;
+    background: linear-gradient(to top, #d2edf4, #f3fbfc);
+    font: 13px 'HelveticaNeueCyr', sans-serif;
+    font-weight: bold;
+    line-height: 2.5em;
+    border: 1px solid#c6dade;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:active {
+    background: linear-gradient(to bottom, #caeaf2, #daf0f6);
+    border: 1px solid #a1c1ca;
+}
+
+.container div:not(:first-child) {
+    margin-bottom: 20px;
+}
+
+.container div:first-child {
+    margin-bottom: 15px;
+}
