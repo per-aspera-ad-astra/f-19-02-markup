@@ -126,7 +126,7 @@ ul {
 
 @media screen and (min-width: 980px) {
     .header {
-        padding: 24px 0;
+        padding: 0;
     }
     .menu {
         position: static;
@@ -142,6 +142,12 @@ ul {
     .menu li a {
         margin-right: 30px;
         font-size: 20px;
+        padding: 25px 10px;
+        margin-top: 25px;
+    }
+    .menu li a:hover {
+        border-bottom: 2px solid #5094f2;
+        text-transform: none;
     }
     .menu ul {
         display: -webkit-box;
@@ -357,6 +363,7 @@ ul {
     width: 50%;
     margin-bottom: 30px;
     font: 300 12px/1.6 'Segoe WP', sans-serif;
+    color: #fff;
 }
 
 .slider-img img {
@@ -366,11 +373,11 @@ ul {
 .slider-text p {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #fff;
 }
 
-.slider-text p span {
+.slider-text h1 {
     font-size: 14px;
+    font-weight: 300;
 }
 
 .slider-text a {
@@ -458,7 +465,7 @@ ul {
         font-size: 22px;
         margin-bottom: 30px;
     }
-    .slider-text p span {
+    .slider-text h1 {
         font-size: 30px;
     }
     .slider-text a {
@@ -500,7 +507,7 @@ ul {
         font-size: 26px;
         margin-bottom: 30px;
     }
-    .slider-text p span {
+    .slider-text h1 {
         font-size: 42px;
     }
     .slider-text a {
@@ -585,12 +592,9 @@ ul {
     background: #ebbb11;
 }
 
-
-/* .gallery-text { 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-} */
+.gallery-text {
+    margin: auto 0;
+}
 
 .gallery-text h2 {
     color: #5094f2;
@@ -662,7 +666,7 @@ ul {
 
 /* Product */
 
-.prodact {
+.product {
     border-bottom: 1px solid #ccc;
 }
 
@@ -685,9 +689,10 @@ ul {
     margin: 15px auto;
 }
 
-.product-text span {
+.product-text h4 {
     font-size: 18px;
     color: #6f7173;
+    font-weight: 400;
 }
 
 .product-text p {
@@ -706,7 +711,7 @@ ul {
         width: 35%;
         margin: 35px auto;
     }
-    .product-text span {
+    .product-text h4 {
         font-size: 34px;
     }
     .product-text p {
@@ -719,12 +724,8 @@ ul {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+        justify-content: space-between;
         padding: 85px 50px 50px 25px;
-    }
-    .product-img {
-        margin-right: 85px;
     }
     .product-img img {
         width: 100%;
@@ -732,7 +733,7 @@ ul {
     .product-text {
         margin-top: 60px;
     }
-    .product-text span {
+    .product-text h4 {
         font-size: 26px;
     }
     .product-text p {
