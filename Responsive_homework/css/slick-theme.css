@@ -1,0 +1,78 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/slick.eot');
+    src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{   display: none;
+    opacity: 0;
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+
+    width: 25px;
+    height: 63px;
+    padding: 0;
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+}
+ .slick-prev:hover,
+.slick-next:hover {
+    color: transparent;
+    outline: none;
+    opacity: 0.5;
+} 
+
+
+.slick-prev
+{
+    left: -25px;
+    background: url(../img/arrow-prev.png) no-repeat;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+
+.slick-next
+{
+    right: -25px;
+    background: url(../img/arrow-next.png) no-repeat;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+
+@media (min-width: 1024px) {
+    .slick-prev,
+    .slick-next {
+        display: block;
+        opacity: 1;
+    }
+
+}
