@@ -21,15 +21,17 @@ html {
   
   body {
     margin: 0;
-    font-size: 12px/1.75;
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 12px;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
     
   }
   
   .container {
-    max-width: 1200px;
+    max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   
   a {
@@ -259,6 +261,9 @@ html {
     line-height: 1.75;
     color: #909090;
   }
+  .text-inner {
+      padding-bottom: 70px;
+  }
 
   .responsive-read a {
       background: #00c39c;
@@ -275,9 +280,9 @@ html {
       -webkit-box-shadow: 0 0 5px #00c39c;
               box-shadow: 0 0 5px #00c39c;
   }
-  /* .responsive-read a:nth-child(3) {
-      display: none;
-  } */
+  .responsive-item:nth-child(3) .responsive-read a{
+    display: none;
+} 
   @media (min-width: 640px) {
     .responsive-item {
         padding-top: 150px;
@@ -293,6 +298,9 @@ html {
     .responsive-text {
         font-size: 27px;
     }
+    .text-inner {
+        padding-bottom: 160px;
+    }
     .responsive-read a {
         font-size: 24px;
         padding: 27px 45px;
@@ -300,6 +308,7 @@ html {
         margin-top: 90px;
         margin-bottom: 160px;
     }
+  
   }
   @media (min-width: 1140px) {
    
@@ -340,12 +349,19 @@ html {
       .responsive-item {
         padding-top: 160px;
       }
+      .responsive-item:nth-child(3) .responsive-read a{
+        display: inline-block;
+    } 
       .responsive-text {
         font-size: 28px;
     }
     .responsive-item:last-child {
        
-        padding-top: 150px;
+        padding-top: 165px;
+    }
+    .responsive-item:last-child .responsive-title {
+       
+        padding-bottom: 60px;
     }
 
      
