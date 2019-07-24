@@ -1,0 +1,116 @@
+*, *::after, *::before {
+    box-sizing: inherit
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 14px/1.4 'Lato', sans-serif;
+    color: #444;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.portfolio {
+    width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+img {
+    vertical-align: top;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 50%;
+}
+
+.portfolio-item:hover .portfolio-item_bg{
+    opacity: 1;
+}
+.portfolio-item_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(22, 160, 134, 0.75);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(68, 68, 68, 0.61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 20px;  
+}
+
+.portfolio-item_bg h3 {
+    margin: 20px 0 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.portfolio-item_bg p {
+    margin: 0;
+}
+
+/* FORM */
+
+.form {
+    padding: 50px 0;
+    background: #ecf0f1;
+}
+
+form {
+    width: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.text-field {
+    background: #fff;
+    color: #999;
+    padding: 17px 12px;
+    border: 2px solid #bec3c7;
+    margin-bottom: 22px;
+}
+
+.input {
+    width: calc(50% - 10px);
+}
+
+.area {
+    width: 100%
+}
+
+.btn {
+    margin-left: auto
+}
