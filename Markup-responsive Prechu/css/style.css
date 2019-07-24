@@ -1,0 +1,474 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('..//fonts/SegoeUI.woff2') format('woff2'),
+        url('..//fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('..//fonts/SegoeUI-Light.woff2') format('woff2'),
+        url('..//fonts/SegoeUI-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 400 14px 'Segoe UI', Arial, sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    background: url(..//img/bg-slider.jpg) center/cover no-repeat;
+}
+
+.header {
+    background: #fff;
+}
+
+@media screen and (min-width: 1250px) {
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .container-inner,
+    .header-inner {
+        width: 976px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 0 auto;
+    }
+}
+
+.container-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 4.06% 11px 4.69%;
+}
+
+@media screen and (min-width: 1250px) {
+    .container-logo {
+        padding-left: 0;
+    }
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a:visited {
+    color: inherit;
+}
+
+.logo img {
+    width: 51px;
+    transform: rotate(180deg);
+}
+
+.logo h1 {
+    font-size: 50px;
+    font-weight: 300;
+    color: #000;
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* For Hamburger */
+.menu {
+    display: none;
+    list-style: none;
+    background: #5094f2;
+    color: #fff;
+    text-align: center;
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.menu li a {
+    font-size: 18px;
+    color: #fff;
+}
+/* End For Hamburger */
+
+@media screen and (min-width: 1250px) {
+    .menu {
+        display: block;
+        background: none;
+        padding-bottom: 20px;
+    }
+
+    .menu li {
+        display: inline-block;
+        border: none;
+        padding: 0;
+    }
+    
+    .menu li:not(:last-child) {
+        padding-right: 20px;
+    }
+    
+    .menu ul li a {
+        color: #6c6c6c;
+        font-size: 20px;
+    }
+    
+    .menu ul li a:hover {
+        padding-bottom: 17px;
+        border-bottom: 3px solid #5094f2;
+    }
+}
+
+@media screen and (max-width: 1249px) {
+    .container-laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .container-mobile {
+        display: none;
+    }
+}
+
+.slider,
+.slider-inner {
+    display: flex;
+    padding-top: 22px;
+    justify-content: center;
+    font-weight: 300;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.slider .slider-text {
+    padding-left: 10.15%;
+    padding-bottom: 15px; 
+}
+
+.slider-text h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.slider-text p {
+    font-size: 23px;
+    padding: 11px 0 32px 0;
+}
+
+.slider-text button {
+    font-size: 31px;
+    font-weight: 300;
+    position: relative;
+    padding: 5px 13px 10px 62px;
+    background: #5094f2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider-text button::before {
+    content: url(..//img/tick.svg);
+    top: 10px;
+    left: 14px;
+    position: absolute;
+    border-radius: 50%;
+    width: 33px;
+}
+
+@media screen and (max-width: 578px) {
+    .slider img {
+        width: 142px;
+        height: 178px;
+    }
+    
+    .slider-text h2 {
+        font-size: 20px;
+    }
+    
+    .slider-text p {
+        font-size: 15px;
+    }
+    
+    .slider-text button {
+        font-size: 20px;
+        padding: 5px 13px 10px 45px;
+    }
+    
+    .slider-text button::before {
+        top: 7px;
+        width: 22px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .slider-inner {
+        width: 976px;
+    }
+
+    .slider-item-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider-item-inner img {
+        width: 345px;
+        height: 436px;
+    }
+
+    .slider-item-inner div {
+        padding-left: 100px;
+        padding-bottom: 0;
+    }
+}
+
+.container-border {
+    border-top: 17px solid red;
+    border-image: url(../img/border-triangles.png) 17 0 0 0 round;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    padding: 39px 7.03% 19px 7.03%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.box div {
+    padding-left: 3.75%;
+}
+
+.box h2 {
+    font-size: 34px;
+    font-weight: 400;
+    color: #5094f2;
+    margin: 0;
+}
+
+.box p {
+    font-size: 19px;
+    color: #909090;
+    padding-top: 1.4%;
+}
+
+@media screen and (min-width: 1250px) {
+    .container-box {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 70px;
+    }
+
+    .box {
+        display: block;
+        padding: 0;
+        width: 256px;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .box img {
+        width: 185px;
+        height: 185px;
+    }
+
+    .box div {
+        padding-left: 0;
+    }
+    
+    .box h2 {
+        font-size: 20px;
+        padding: 25px 0 7px;
+    }
+    
+    .box p {
+        font-size: 14px;
+        padding: 0;
+    }
+}
+
+.cart {
+    border-bottom: 1px solid #cccccc;
+}
+
+.cart h2 {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 44px;
+    text-align: center;
+    color: #6f7173;
+    margin: 0;
+    padding-top: 43px;
+    padding-bottom: 43px;
+}
+
+.cart img {
+    display: block;
+    margin: 0 auto;
+}
+
+.cart h3 {
+    font-size: 34px;
+    font-weight: 400;
+    color: #6f7173;
+    padding: 0 7.03% 26px 12.18%;
+    margin: 0;
+}
+
+.cart p {
+    font-size: 17px;
+    line-height: 36px;
+    font-weight: 300;
+    color: #909090;
+    padding: 0 7.03% 45px 12.18%;
+}
+
+@media screen and (min-width: 1250px) {
+    .cart {
+    border: none;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 90px;
+    padding-bottom: 65px;
+  }
+
+  .cart h2 {
+      padding: 0 0 37px 0;
+  }
+
+  .cart img {
+      width: 371px;
+      height: 279px;
+  }
+
+  .cart h3 {
+    font-size: 26px;
+    padding: 0 7.03% 26px 90px;
+  }
+
+  .cart p {
+    font-size: 15px;
+    padding: 0 0 0 90px;
+  }
+}
+
+footer {
+    font-size: 15px;
+    font-weight: 300;
+    color: #909090;
+    text-align: center;
+    padding: 34px 0;
+}
+
+@media screen and (min-width: 1250px) {
+    footer {
+        border-top: 1px solid #cccccc;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 80%;
+    width: 320px;
+  }
+
+.modal-content form input {
+    display: block;
+    margin: 15px auto;
+  }
+
+.form-text {
+    color: #6c6c6c;
+}
+
+.submit-btn {
+    background: #5094f2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
