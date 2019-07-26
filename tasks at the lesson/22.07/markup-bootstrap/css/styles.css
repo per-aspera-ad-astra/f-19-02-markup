@@ -146,13 +146,6 @@ img {
   padding: 10px 0 10px 15px;
 }
 
-.menu-opener {
-  display: flex;
-  align-items: center;
-  font-family: var(--font-secondary);
-  text-transform: uppercase;
-  font-weight: bold;
-}
 
 .menu-wrapper {
   position: relative;
