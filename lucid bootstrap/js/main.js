@@ -24,7 +24,7 @@ $(document).ready(function() {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
+                    }, 2000, function() {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -41,6 +41,7 @@ $(document).ready(function() {
         });
       $(".regular").slick({
         dots: true,
+        arrows : false,
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
