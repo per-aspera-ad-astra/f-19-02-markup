@@ -1,28 +1,9 @@
-html {
-    box-sizing: border-box;
-}
+@import "base/base";
+@import "base/bootsrtap-grid";
+@import "base/stylesheet";
+@import "base/fontello";
 
-*, *::after, *::before {
-    box-sizing: inherit
-}
+@import "helpers/mixins";
+@import "helpers/vars";
 
-body {
-    margin: 0;
-  }
-
-a {
-    text-decoration: none;
-    color:inherit;
-}
-
-p {  
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5 {
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-}
+@import "partials/header";

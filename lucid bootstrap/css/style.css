@@ -211,11 +211,11 @@ ul {
 
 .menu {
     display: none;
-    left: 0;
-    top: 100%;
+    /* left: 0;
+    top: 100%; */
     width: 100%;
     padding-top: 20px;
-    z-index: 100;
+    /* z-index: 100; */
     text-align: center;
 }
 
@@ -257,7 +257,7 @@ ul {
     }
     .menu {
         display: block;
-        position: unset;
+        /* position: unset; */
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
@@ -299,10 +299,13 @@ ul {
     line-height: 1.5;
 }
 
+.header-body-item:first-child {
+    padding-bottom: 50px;
+}
+
 .btn-main {
     display: inline-block;
     padding: 10px 15px;
-    margin-bottom: 50px;
     text-transform: uppercase;
     font-size: 10px;
     font-weight: 900;
@@ -314,9 +317,11 @@ ul {
     transition: .3s;
 }
 
+
 .btn-main:hover {
     background: transparent;
     border: 1px solid #4d4e53;
+    padding: 9px 14px;
 }
 
 .btn-header {
@@ -330,8 +335,8 @@ ul {
     .header-body-text {
         font-size: 12px;
     }
-    .btn-main {
-        margin-bottom: 20px;
+    .header-body-item:first-child {
+        padding-bottom: 20px;
     }
 }
 
@@ -353,6 +358,9 @@ ul {
         padding: 14px 20px;
         font-size: 12px;
     }
+    .btn-main:hover {
+        padding: 13px 20px;
+    }
 }
 
 @media (min-width:1200px) {
@@ -371,6 +379,9 @@ ul {
     .btn-main {
         padding: 17px 25px;
         font-size: 14px;
+    }
+    .btn-main:hover {
+        padding: 16px 24px;
     }
     .header-body-item:first-child {
         padding-top: 40px;
@@ -467,6 +478,7 @@ ul {
     background: #f2f2f2;
     overflow: hidden;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .about-img img {
@@ -497,7 +509,7 @@ ul {
 }
 
 .about-info-text {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     color: #999;
@@ -549,6 +561,7 @@ ul {
     .about-item .title {
         padding-top: 40px;
     }
+
 }
 
 @media (min-width: 1200px) {
@@ -557,6 +570,7 @@ ul {
     }
     .about-short {
         padding-top: 50px;
+        padding-bottom: 0;
     }
     .about-img img {
         width: auto;
@@ -892,12 +906,13 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 16px 0 16px 20px;
+    padding: 16px 20px 16px 20px;
     background: inherit;
     border: 1px solid #444348;
     color: #fff;
     text-transform: uppercase;
     color: #fff;
+    font-size: 14px;
     font-weight: bold;
     font-family: var(--font-main);
     outline-color: var(--blue-color);
@@ -989,6 +1004,9 @@ textarea::placeholder {
             -ms-transform: translateY(5%);
                 transform: translateY(5%);
     }
+    .form input:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1007,9 +1025,6 @@ textarea::placeholder {
     .contact-wrapper {
         margin: 60px 0 20px;
         font-size: 18px;
-    }
-    .form input:last-child {
-        margin-bottom: 0;
     }
 }
 

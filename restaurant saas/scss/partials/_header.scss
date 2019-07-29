@@ -1,0 +1,43 @@
+.header {
+    background: url(../../images/bg-header.png) center/cover no-repeat;  
+    color: $white-color;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-list {
+      display: flex;
+      font: 900 21px 'Gentium Book Basic', sans-serif;
+      
+     a {
+         display: inline-block;
+         padding: 50px 10px;
+     }
+
+     a:hover {
+         padding: 47px 10px;
+         border-top: 3px solid #c9c6bb;
+     }
+
+     i {
+         display: inline-block;
+         padding: 50px 0;
+     }
+
+     .header-top-social {
+        color: $orange-color;
+      }
+    }
+}
+
+.header-body {
+    &-body-links {
+        font-size: 18px;
+    }
+    &-title {
+        font-size: 50px;
+    }
+}

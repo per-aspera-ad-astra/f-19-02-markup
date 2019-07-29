@@ -49,11 +49,14 @@ $(document).ready(function() {
         lazyLoad: 'ondemand',
         autoplay: true,
         autoplaySpeed: 1500,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }]
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                autoplay: false,
+              }
+            }
+          ]
       });
 })
