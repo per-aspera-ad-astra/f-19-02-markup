@@ -1,0 +1,756 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: 18px 'Source Sans Pro', Arial, sans-serif;
+  color: #999999;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #008ed6;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1a1a1a;
+  position: relative;
+}
+
+/* Blue Line */
+
+h2::before, h2::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  width: 20px;
+  height: 2px;
+  background: #008ed6;
+}
+
+h2::before {
+  left: calc(50% + 1px); /* указываем откуда начинается линия */
+}
+
+h2::after {
+  right: calc(50% + 1px); /* указываем откуда начинается линия */
+}
+
+/* Blue Line end*/
+
+.home-page {
+  background: url(../img/bg-header.png);
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 40px 0px 60px;
+  }
+}
+
+/* For Hamburger */
+
+.menu {
+  display: none;
+  list-style: none;
+  color: #fff;
+  text-align: center;
+}
+
+.menu.open {
+  display: block;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px 0;
+  list-style: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.menu li:first-child {
+  border-top: 1px solid #ffffff;
+}
+
+.menu li a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.open {
+  padding-bottom: 15px;
+}
+
+/* End For Hamburger */
+
+@media screen and (min-width: 992px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu {
+    display: block;
+  }
+  .menu ul {
+    margin: 0;
+  }
+  .menu li {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    border: none;
+  }
+  .menu li:first-child {
+    border-top: none;
+  }
+  .menu li:hover {
+    background: none;
+  }
+  .menu li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .menu li a:hover::before,
+  .menu li a:hover::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: calc(50% - 1px); /* между линиями расстояние 2px, чтобы линия начиналась с края и не доходила до середины 1px и нужна эта формула, таким образом это будет работать при подчеркивании заголовков разной длины */
+    height: 2px;
+    background: #00aaef;
+  }
+  .menu li a::before {
+    left: 0; /* указываем откуда начинается линия */
+  }
+  .menu li a::after {
+    right: 0; /* указываем откуда начинается линия */
+  }
+}
+
+.home-text h3 {
+  margin-bottom: 30px;
+}
+
+.home-text h1 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.home-text p {
+  margin-bottom: 50px;
+}
+
+.btn {
+  margin-top: 15px;
+  margin-right: 20px;
+  padding: 16px 28px;
+  font: bold 14px 'Source Sans Pro', Arial, sans-serif;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #454449;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background: #008ed6;
+  border: 1px solid #008ed6;
+}
+
+.home-img {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.home-img img {
+  width: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .home-img {
+    margin-top: 0;
+    text-align: end;
+  }
+  .home-img img {
+    width: 505px;
+  }
+}
+
+/* FEATURES PAGE */
+
+.features {
+  padding: 30px 0;
+  border-bottom: 1px solid #ededed;
+}
+
+.features h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.features .row {
+  margin-top: 35px;
+}
+
+.features h4 {
+  color: black;
+  margin: 10px 0;
+}
+
+.features .col-sm-6 {
+  text-align: center;
+  margin: 35px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .features {
+    padding: 65px 0 75px;
+  }
+  .features .row {
+    margin-top: 110px;
+  }
+  .features h4 {
+    margin: 30px 0 20px;
+  }
+  .col-sm-6 {
+    margin: 0;
+  }
+}
+
+/* "dip into the details" Page */
+
+.details {
+  padding-top: 30px;
+}
+
+.details h2 {
+  margin-bottom: 60px;
+}
+
+.img-device,
+.img-iphone {
+  text-align: center;
+}
+
+.img-device img,
+.img-iphone img {
+  width: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .details .row {
+    margin-top: 65px;
+  }
+  .details h3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .details h2 {
+    margin-bottom: 60px;
+  }
+  .details p {
+    margin-bottom: 35px;
+  }
+  .img-device img {
+    width: 510px;
+  }
+  .img-iphone img {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .img-iphone img {
+    width: 718px;
+  }
+}
+
+.details ul {
+  padding: 25px;
+}
+
+.details li {
+  position: relative;
+  font-size: 18px;
+  color: #1b1b1b;
+  list-style: none;
+  line-height: 36px;
+}
+
+.icon-cup::before, 
+.icon-mouse::before, 
+.icon-energy::before, 
+.icon-speedometer::before {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+}
+
+.icon-cup::before {
+  content: url(../img/Cup.png);
+}
+
+.icon-mouse::before {
+  content: url(../img/Mouse.png);
+}
+
+.icon-energy::before {
+  content: url(../img/Energy.png);
+}
+
+.icon-speedometer::before {
+  content: url(../img/Speedometer.png);
+}
+
+.details-background {
+  background: #f2f2f2;
+}
+
+/* Blue Line */
+
+.details .col-lg-6 h2::before, 
+.details .col-lg-5 h2::before {
+  left: 0; /* указываем откуда начинается линия */
+}
+
+.details .col-lg-6 h2::after, 
+.details .col-lg-5 h2::after {
+  left: 22px; /* указываем откуда начинается линия */
+}
+
+/* Blue Line end*/
+
+/* SLIDER COMMENTS */
+
+.comments {
+  background: url(../img/bg-details.png) center/cover no-repeat;
+  color: #ffffff;
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .comments {
+    padding-top: 60px;
+    padding-bottom: 210px;
+  }
+}
+
+.comments h3, 
+.comments h2 {
+  text-align: center;
+}
+
+.comments h2 {
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+  .comments h2 {
+    margin-bottom: 115px;
+  }
+}
+
+.slider {
+  padding-bottom: 70px;
+  margin: 0;
+}
+
+.comments .col-lg-6 {
+  font: italic 24px/36px 'Source Sans Pro', Arial, sans-serif;
+}
+
+.signature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signature div {
+  padding-left: 25px;
+}
+
+.name-comment {
+  margin-bottom: 15px;
+  font: 14px/1.15 'Source Sans Pro', Arial, sans-serif;
+}
+
+.position-comment {
+  margin: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Question with buttons */
+
+.question {
+  padding: 55px 0;
+  font-size: 34px;
+  background: #15141a;
+  color: #ffffff;
+}
+
+.question .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question p {
+  margin: 0;
+}
+
+.question span {
+  font-weight: 300;
+}
+
+.question .col-lg-7 {
+  text-align: center;
+}
+
+.question .col-lg-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.question .btn {
+  margin: 15px 15px 0 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .question .col-lg-5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .question .btn {
+    margin-top: 0;
+  }
+}
+
+/* PRICE PAGE */
+
+.plans {
+  text-align: center;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 992px) {
+  .plans {
+    padding-bottom: 45px;
+  }
+}
+
+.plans .wrapper {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.plans h2 {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 992px) {
+  .plans h2 {
+    margin-bottom: 100px;
+  }
+}
+
+.plans h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.price {
+  padding: 40px 0 35px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.price span {
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #1a1a1a;
+}
+
+.price span::before {
+  content: '$';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  font-size: 18px;
+}
+
+.plans .btn {
+  margin: 0 0 30px 0;
+  color: #008ed6;
+  border-color: #e0e0e0;
+}
+
+.price-text {
+  margin: 50px 30px 45px;
+}
+
+.price-text span {
+  color: #008ed6;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper:hover .wrapper-hover {
+  display: block;
+}
+
+.wrapper-hover h4 {
+  color: #008ed6;
+}
+
+.wrapper-hover .price, 
+.wrapper-hover .btn {
+  background: #008ed6;
+}
+
+.wrapper-hover .price, 
+.wrapper-hover .price span, 
+.wrapper-hover .btn {
+  color: #ffffff;
+}
+
+.wrapper-hover .btn {
+  border: 1px solid #008ed6;
+}
+
+.wrapper-hover {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* CONTACTS PAGE */
+
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 360px;
+  background: #ededed;
+}
+
+@media screen and (max-width: 639px) {
+  .contacts {
+    padding-bottom: 60px;
+  }
+}
+
+.contacts h3 {
+  text-align: center;
+}
+
+.contacts h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .contacts h2 {
+    margin-bottom: 100px;
+  }
+}
+
+.contacts-info {
+  text-align: center;
+}
+
+/* FORMS */
+@media screen and (min-width: 640px) {
+  .form {
+    background: url(../img/bg-map.png) center/cover no-repeat;
+  }
+}
+
+.contacts-form {
+  position: relative;
+  -webkit-transform: translateY(-300px);
+          transform: translateY(-300px);
+  padding-top: 55px;
+  padding-bottom: 40px;
+  max-width: 770px;
+  margin: 0 auto;
+  background: #15141a;
+}
+
+@media screen and (max-width: 639px) {
+  .contacts-form {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.user-data, 
+.user-message {
+  margin: 0 10px;
+}
+
+.contacts-form input, 
+.contacts-form textarea {
+  display: block;
+  font: bold 14px/48px 'Source Sans Pro', Arial, sans-serif;
+  background: transparent;
+  border: 1px solid #444348;
+  border-radius: 3px;
+  padding-left: 25px;
+  color: #a09daa;
+  width: 300px;
+}
+
+@media screen and (max-width: 340px) {
+  .contacts-form input, 
+  .contacts-form textarea {
+    width: 270px;
+  }
+}
+
+.contacts-form input:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-form textarea {
+  height: 196px;
+  line-height: 1.15;
+}
+
+@media screen and (max-width: 639px) {
+  .contacts-form textarea {
+    margin-top: 20px;
+  }
+}
+
+.contacts-form input::-webkit-input-placeholder, 
+.contacts-form textarea::-webkit-input-placeholder {
+  color: #444348;
+}
+
+.contacts-form input:-ms-input-placeholder, 
+.contacts-form textarea:-ms-input-placeholder {
+  color: #444348;
+}
+
+.contacts-form input::-ms-input-placeholder, 
+.contacts-form textarea::-ms-input-placeholder {
+  color: #444348;
+}
+
+.contacts-form input::placeholder, 
+.contacts-form textarea::placeholder {
+  color: #444348;
+}
+
+.button {
+  text-align: right;
+}
+
+@media screen and (max-width: 639px) {
+  .button {
+    text-align: center;
+  }
+}
+
+.form .btn {
+  margin-right: 0;
+}
+
+/* FOOTER */
+
+footer {
+  padding-top: 55px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #444348;
+  background: #15141a;
+}
+
+@media screen and (max-width: 639px) {
+  footer {
+    border-top: 1px solid #444348;
+  }
+}
+
+footer a {
+  display: inline-block;
+  font-size: 18px;
+  color: #444348;
+}
+
+footer a:hover {
+  color: #0477b3;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 30px 0 0 0;
+}
