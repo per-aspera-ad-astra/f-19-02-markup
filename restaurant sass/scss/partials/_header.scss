@@ -1,0 +1,50 @@
+.header {
+    background: red; 
+    color: $orange-color;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-list {
+      display: flex;
+      font: 900 21px 'Gentium Book Basic', sans-serif;
+      
+     a {
+         display: inline-block;
+         padding: 50px 10px;
+     }
+
+     a:hover {
+         padding: 47px 10px;
+         border-top: 3px solid #c9c6bb;
+     }
+
+     i {
+         display: inline-block;
+         padding: 50px 0;
+     }
+
+     .header-top-social {
+        color: $orange-color;
+      }
+    }
+}
+
+.header-body {
+    padding: 150px 0;
+    
+    &-links {
+        font-size: 18px;
+        color: red;
+    }
+    .header-title {
+        font-size: 90px;
+    }
+}
+
+.white-title {
+    background: green;
+}
