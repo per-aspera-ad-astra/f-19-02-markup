@@ -2,6 +2,10 @@ body {
     font: 400 13px/1.5 $font-base;
 }
 
+button {
+    cursor: pointer;
+}
+
 // Burger
 
 .burger {
@@ -43,6 +47,12 @@ body {
     }
 }
 
+.buttons {
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    display: flex;
+}
 .button__item {
     position: relative;
     display: inline-block;
@@ -52,7 +62,7 @@ body {
     font-weight: bold;
     font-size: 11px;
     color: #fff;
-    min-width: calc(50% - 15px);
+    width: 100%;
     text-align: center;
     text-transform: uppercase;
     border-radius: 4px;
@@ -101,6 +111,8 @@ body {
         }
     }
 }
+
+
 
 .title {
     position: relative;

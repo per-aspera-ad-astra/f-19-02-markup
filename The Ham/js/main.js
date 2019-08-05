@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+
+  // Load more button
   var $items = $('.work__item:gt(11)');
   $items.hide();
   $('.work__item-btn').click(function() {
@@ -8,6 +10,16 @@ $(document).ready(function() {
     $btn.text($btn.text() == 'Load less' ? 'Load more' : 'Load less');
   });
 
+  // Filter
+
+  var $grid = $('.grid').isotope({  
+  });
+  $('.filter-button-group').on( 'click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+
+  // Burger
   $('.burger').on('click', function(e){
     e.preventDefault();
     $('.menu').slideToggle(500);
@@ -27,8 +39,9 @@ $(document).ready(function() {
     }
   })
 
+  // Scroll
+
   $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
@@ -93,4 +106,18 @@ $(document).ready(function() {
     //     }
     //   ]
   });
+
+//Tabset
+jQuery(function(){
+	initTabs();
+});
+
+function initTabs() {
+	jQuery('ul.tabset').contentTabs({
+		// autoHeight: true,
+		// animSpeed: 200,
+		// effect: 'fade',
+		// tabLinks: 'a'
+	});
+}
 })
