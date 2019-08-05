@@ -1,0 +1,59 @@
+.works {
+    &__wrapper {
+        justify-content: center;
+    
+        &-button-group {
+    
+    :hover {
+        color: #c0301c;
+    }
+    button {
+        font-size: 16px;
+        font-family: $font-base;
+        border: none;
+        background: none;
+        color: inherit;
+        margin-bottom: 20px;
+
+        @include screen(md) {
+            margin-bottom: 40px;
+        }
+        @include screen(lg) {
+            margin-bottom: 70px;
+        }
+    }
+  }
+}
+.item img {
+    padding: 10px 10px;
+}
+&__grid {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+
+    :hover &-content {
+    opacity: 1;
+    transition: .5s;
+}
+    &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 48, 28, .5);  
+    opacity: 0;
+    transition: opacity .5s linear;
+    cursor: pointer;
+
+}
+}
+
+
+}

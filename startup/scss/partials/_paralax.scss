@@ -1,0 +1,40 @@
+.paralax {
+    background: url(../images/paralax.jpg)center/cover no-repeat;
+    padding: 50px 0;
+    color: #fff;
+
+    @include screen(md) {
+        padding: 70px 0;
+    }
+    @include screen(lg) {
+        padding: 100px 0;
+    }
+    &__inner-text {
+        font-size: 16px;
+
+        @include screen(md) {
+            font-size: 24px;
+        }
+        @include screen(lg) {
+            font-size: 29px;
+        }
+        @include screen(xl) {
+            font-size: 30px;
+        }
+
+        & span {
+            text-transform: uppercase;
+        }
+        &-second {
+            margin-bottom: 30px;
+    
+            @include screen(lg) {
+                margin-bottom: 50px;
+            }
+    }
+   
+}
+&__inner-btn {
+    font-size: 18px;
+}
+    }

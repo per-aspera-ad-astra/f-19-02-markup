@@ -1,0 +1,21 @@
+@import "helpers/vars";
+@import "helpers/mixins";
+
+@import "base/font";
+@import "base/normalize";
+@import "base/bootstrap-grid";
+@import "base/base";
+@import "base/slick";
+@import "base/slick-theme";
+
+@import "partials/header";
+@import "partials/header__inner";
+@import "partials/blog";
+@import "partials/about";
+@import "partials/about-slider";
+@import "partials/paralax";
+@import "partials/clients";
+@import "partials/contact";
+@import "partials/services";
+@import "partials/works";
+@import "partials/footer";

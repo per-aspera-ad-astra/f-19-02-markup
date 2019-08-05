@@ -1,0 +1,20 @@
+.services__inner {
+    &-img {
+        margin-bottom: 30px;
+    }
+    &-title {
+        font: 600 14px/1.7 $font-second;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &-text {
+        margin-bottom: 30px;
+
+        @include screen(md) {
+            margin-bottom: 50px;
+        }
+        @include screen(lg) {
+        margin-bottom: 0;
+        }
+    }
+}

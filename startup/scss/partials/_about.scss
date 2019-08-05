@@ -1,0 +1,15 @@
+.about {
+
+    &-text-left,
+    &-text-right {
+        margin-bottom: 30px;
+        
+        @include screen(md) {
+            margin-bottom: 50px;
+        }
+        @include screen(lg) {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}

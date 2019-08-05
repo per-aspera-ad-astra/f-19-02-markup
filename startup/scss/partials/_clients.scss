@@ -1,0 +1,21 @@
+.clients__slider {
+    &-img img {
+       margin: 0 25px 25px 25px;
+       vertical-align: middle;
+
+       @include screen(lg) {
+        margin: 0 10px 50px 10px;
+       }
+       @include screen(xl) {
+        margin: 0 25px 60px 25px;
+       }
+    }
+    &-text {
+        font-family: $font-base;
+        font-size: 18px;
+
+        p {
+            font-style: italic;
+        }
+    }
+}
