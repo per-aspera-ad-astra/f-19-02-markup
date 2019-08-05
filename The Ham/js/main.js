@@ -44,6 +44,7 @@ $(document).ready(function() {
   $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
+  .not ('[href^="#item"]')
   .click(function(event) {
     // On-page links
     if (
