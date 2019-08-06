@@ -1,0 +1,46 @@
+.footer {
+    background: $color-hover no-repeat;
+    text-align: center;
+    padding: 50px 0;
+
+    @include screen(lg) {
+        padding: 100px 0;
+    }
+
+    &__inner a {
+        display: inline-block;
+        color: #fff;
+        font-size: 15px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 0 7px 60px 7px;
+        transition: 0.5s;
+
+        &:hover {
+            background: #fff;
+            color: $color-font;
+        }
+        
+    }
+
+    &-copy {
+        position: relative;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        &::before {
+            content: '';
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: -30px;
+            left: 50%;
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
+      
+          }
+    }
+}

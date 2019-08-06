@@ -27,7 +27,7 @@
 .item img {
     padding: 10px 10px;
 }
-&__grid {
+&__grid-inner {
     position: relative;
     overflow: hidden;
 
@@ -35,11 +35,13 @@
         width: 100%;
     }
 
-    :hover &-content {
+    :hover .works__grid-content {
     opacity: 1;
     transition: .5s;
 }
-    &-content {
+   
+}
+&__grid-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,8 +54,47 @@
     transition: opacity .5s linear;
     cursor: pointer;
 
-}
-}
+    &-inner {
+        margin-top: 105px;
+    }
 
+    &-title {
+        font-size: 18px;
+        font-family: $font-second;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    &-text {
+        font-family: 12px;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+
+    &-btn {
+        position: relative;
+        text-transform: uppercase;
+        color: $color-hover;
+        padding: 15px 40px 15px 20px;
+        background: #fff;
+        transition: 0.4s;
+
+        &:hover {
+            background: $color-hover;
+            color: #fff;
+        }
+
+        &::after {
+            content: '\f006';
+            font-size: 13px;
+            font-family: "fontello";
+            position: absolute;
+            top: 52%;
+            left: 77%;
+            transform: translate(-50%,-50%); 
+        }
+    }
+
+}
 
 }

@@ -3,9 +3,16 @@ $(document).ready(function() {
       $(this).toggleClass('is-active');
       $('.navigation').toggleClass('open');
     });
-  })
 
-    $(document).ready(function() {
+    new WOW().init();
+
+    $("#navigation").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1900);
+  });
+
       $('.about__slider-inner').slick({
         dots: false,
         slidesToShow: 4,
@@ -40,9 +47,7 @@ $(document).ready(function() {
          // instead of a settings object
         ]
       });
-    });
 
-    $(document).ready(function() {
       $('.clients__slider-inner').slick({
         dots: false,
         slidesToShow: 1,
@@ -78,4 +83,6 @@ $(document).ready(function() {
          // instead of a settings object
         ]
       });
+
+      
     });

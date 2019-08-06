@@ -7,6 +7,7 @@
 
     position: absolute;
     top: 40%;
+    z-index: 5;
 
     display: block;
 
@@ -49,7 +50,7 @@
 .slick-prev:before,
 .slick-next:before
 {
-    font-family: 'slick';
+    font-family: "fontello";
     font-size: 20px;
     line-height: 1;
 
@@ -62,7 +63,7 @@
 
 .slick-prev
 {
-    left: 25px;
+    left: 29px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -80,7 +81,7 @@
 
 .slick-next
 {
-    right: 30px;
+    right: 29px;
 }
 [dir='rtl'] .slick-next
 {
@@ -119,12 +120,12 @@
         }
         @include screen(md) {
             &-item-img {
-                padding-right: 10px;
+                padding: 0 10px;
             }
         }
             @include screen(lg) {
                 &-item-img {
-                    padding-right: 15px;
+                    padding: 0 15px;
                 }
            
             }
@@ -147,6 +148,16 @@
             transition: opacity .5s linear;
             cursor: pointer;
 
+            @include screen(md) {
+                    left: 10px;
+                }
+            
+                @include screen(lg) {
+                    left: 15px;
+               
+                }
+
+
             a {
                 color: #fff;
                 font-size: 18px;
@@ -158,12 +169,16 @@
             }
 
             @include screen(md) {
-                   width: calc(100% - 10px);
+                   width: 94%;
             }
             @include screen(lg) {
-                    width: calc(100% - 15px);
+                    width: 88%;
                         
                     }
+                    @include screen(lg) {
+                        width: 90%;
+                            
+                        }
           &-icons {
               padding-top: 70%;
           }
