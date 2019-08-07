@@ -32,6 +32,15 @@
   }
 }
 
+@mixin progress-animation($finish) {
+  from {
+    width: 0;
+  }
+  to {
+    width: $finish;
+  }
+}
+
 // @mixin pattern-bg {
 //   padding: 40px 0;
 //   background: #f2f2f2 url(../images/bg-about-pattern.png) center/cover no-repeat;

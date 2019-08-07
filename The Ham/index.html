@@ -208,31 +208,69 @@
         <section id="about" class="about section">
             <div class="container">
                 <div class="row">
-                    <div class="about__item col-md-6 offset-md-6">
+                    <div class="about__item col-md-10 offset-md-1 col-lg-6 offset-lg-6">
                         <h2 class="title title__white"> About our Company</h2>
                         <div class="about__links">
-                            <ul class="about__links-list">
-                                <li class="about__links-list-item"><a href="#">our history</a></li>
-                                <li class="about__links-list-item"><a href="#">our biography</a></li>
-                                <li class="about__links-list-item active"><a href="#">our skills</a></li>
+                            <ul class="tabset about__links-list">
+                                <li class="tabset__item"><a href="#about-link__history" class="tabset__item-opener">our
+                                        history</a></li>
+                                <li class="tabset__item"><a href="#about-link__biography"
+                                        class="tabset__item-opener ">our biography</a></li>
+                                <li class="tabset__item"><a href="#about-link__skills"
+                                        class="tabset__item-opener active">our skills</a></li>
                             </ul>
-                            <ul class="about__skills">
-                                <li class="about__skills-item">
-                                    <span class="interface"> user interface </span>
-                                </li>
-                                <li class="about__skills-item">
-                                    <span class="web-design"> web design</span>
-                                </li>
-                                <li class="about__skills-item">
-                                    <span class="wordpress">wordpress</span>
-                                </li>
-                                <li class="about__skills-item">
-                                    <span class="html-css">html &amp; css</span>
-                                </li>
-                                <li class="about__skills-item">
-                                    <span class="app-design">app design</span>
-                                </li>
-                            </ul>
+                            <div class="tab-list">
+                                <div id="about-link__history" class="tab-list__group">
+                                    <div class="tab-list__history">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incid idunt ut labore et dolore magna aliqua. </p>
+                                        <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                            deserunt mollit anim id est laborum.</p>
+                                        <ul class="tab-list__history-list">
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                            <li class="tab-list__history-list-item">Excepteur sint occaecat sint.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="about-link__biography" class="tab-list__group">
+                                    <div class="tab-list__biography">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio
+                                            ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed
+                                            dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit. Vestibu lum nec odio ipsum. Sus pendisse cursus malesua da
+                                            facilisis. Vestibulum nec odio ipsum. </p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio
+                                            ipsum Suspendisse cursus malesuada facilisis. Nunc con sectetur odio sed
+                                            dolor tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <div id="about-link__skills" class="tab-list__group">
+                                    <ul class="tab-list__skills">
+                                        <li class="tab-list__skills-item"><span class="tab-list__skills-item-text">User
+                                                Interface</span> <span class="tab-list__skills-item-line wow"></span>
+                                        </li>
+                                        <li class="tab-list__skills-item"><span class="tab-list__skills-item-text">Web
+                                                Design</span> <span class="tab-list__skills-item-line wow"
+                                                data-wow-delay="0.5s"></span></li>
+                                        <li class="tab-list__skills-item"><span
+                                                class="tab-list__skills-item-text">Wordpress</span> <span
+                                                class="tab-list__skills-item-line wow" data-wow-delay="1s"></span></li>
+                                        <li class="tab-list__skills-item"><span class="tab-list__skills-item-text">HTML
+                                                &amp; CSS</span> <span class="tab-list__skills-item-line wow"
+                                                data-wow-delay="1.5s"></span></li>
+                                        <li class="tab-list__skills-item"><span class="tab-list__skills-item-text">App
+                                                Design</span> <span class="tab-list__skills-item-line wow"
+                                                data-wow-delay="2s"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -250,14 +288,14 @@
                     <h2 class="title title__black col-md-8 offset-md-2 col-lg-6 offset-lg-3"> Our amazing work </h2>
                     </h2>
                 </div>
-                <div class="work__list button-group filter-button-group">
-                    <button class="work__list-item active" data-filter="*">all</button>
-                    <button class="work__list-item" data-filter=".graphic">graphic design</button>
-                    <button class="work__list-item" data-filter=".web">web design</button>
-                    <button class="work__list-item" data-filter=".landing">landing pages</button>
-                    <button class="work__list-item" data-filter=".wordpress"> wordpress</button>
+                <div class="button-group-home filters-button-group work__list button-group filter-button-group">
+                    <button class="button is-checked work__list-item" data-filter="*">all</button>
+                    <button class="button work__list-item" data-filter=".graphic">graphic design</button>
+                    <button class="button work__list-item" data-filter=".web">web design</button>
+                    <button class="button work__list-item" data-filter=".landing">landing pages</button>
+                    <button class="button work__list-item" data-filter=".wordpress"> wordpress</button>
                 </div>
-                <div class="row grid">
+                <div class="isotope-items-wrap grid" id="grid">
                     <div class="wordpress work__item col-sm-6 col-md-4 col-lg-3">
                         <div class="work__item-img">
                             <img src="img/work-item-1.jpg" alt="">
@@ -583,7 +621,7 @@
                         </div>
 
                     </div>
-                    <div class="wordpress work__item col-sm-6 col-md-4 col-lg-3">
+                    <div class="web work__item col-sm-6 col-md-4 col-lg-3">
                         <div class="work__item-img">
                             <img src="img/work-item-14.jpg" alt="">
                             <div class="work__item-hover">
@@ -759,12 +797,15 @@
 
                     </div>
                 </div>
-                <div class="row">
+                <button class="button  showMore work__item-btn button__item button__item-primary" id="showMore">load
+                    more</button>
+
+                <!-- <div class="row">
                     <div
                         class="work__item-link col-8 offset-2 col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-xl-2 offset-xl-5">
                         <button class="work__item-btn button__item button__item-primary"> Load more </button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -1122,71 +1163,176 @@
                                     <li class="pricing__item-list-item"> 3 online store</li>
                                 </ul>
                                 <div class="pricing__item-button">
-                                    <button class="pricing__btn button__item"> buy now </button>
+                                    <a href="#" class="pricing__btn button__item"> buy now </a>
                                 </div>
                             </div>
                         </div>
                         <div class="pricing__inner col-md-6 col-lg-3">
-                                <div class="pricing__item ">
-                                    <h3 class="pricing__item-title"> business</h3>
-                                    <div class="pricing__item-cost">
-                                        <p>$199<span>/Month</span></p>
-                                    </div>
-                                    <ul class="pricing__item-list">
-                                        <li class="pricing__item-list-item"> 1 hosting</li>
-                                        <li class="pricing__item-list-item"> 2 email marketing</li>
-                                        <li class="pricing__item-list-item"> 5 datsbase</li>
-                                        <li class="pricing__item-list-item"> 2 Design pack</li>
-                                        <li class="pricing__item-list-item"> 3 website layout </li>
-                                        <li class="pricing__item-list-item"> 5 header stile</li>
-                                        <li class="pricing__item-list-item"> 3 online store</li>
-                                    </ul>
-                                    <div class="pricing__item-button">
-                                        <button class="pricing__btn button__item"> buy now </button>
-                                    </div>
+                            <div class="pricing__item ">
+                                <h3 class="pricing__item-title"> business</h3>
+                                <div class="pricing__item-cost">
+                                    <p>$199<span>/Month</span></p>
                                 </div>
+                                <ul class="pricing__item-list">
+                                    <li class="pricing__item-list-item"> 1 hosting</li>
+                                    <li class="pricing__item-list-item"> 2 email marketing</li>
+                                    <li class="pricing__item-list-item"> 5 datsbase</li>
+                                    <li class="pricing__item-list-item"> 2 Design pack</li>
+                                    <li class="pricing__item-list-item"> 3 website layout </li>
+                                    <li class="pricing__item-list-item"> 5 header stile</li>
+                                    <li class="pricing__item-list-item"> 3 online store</li>
+                                </ul>
+                                <div class="pricing__item-button">
+                                    <a href="#" class="pricing__btn button__item"> buy now </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="pricing__inner col-md-6 col-lg-3 active">
-                                <div class="pricing__item ">
-                                    <h3 class="pricing__item-title"> professional</h3>
-                                    <div class="pricing__item-cost">
-                                        <p>$299<span>/Month</span></p>
-                                    </div>
-                                    <ul class="pricing__item-list">
-                                        <li class="pricing__item-list-item"> 1 hosting</li>
-                                        <li class="pricing__item-list-item"> 2 email marketing</li>
-                                        <li class="pricing__item-list-item"> 5 datsbase</li>
-                                        <li class="pricing__item-list-item"> 2 Design pack</li>
-                                        <li class="pricing__item-list-item"> 3 website layout </li>
-                                        <li class="pricing__item-list-item"> 5 header stile</li>
-                                        <li class="pricing__item-list-item"> 3 online store</li>
-                                    </ul>
-                                    <div class="pricing__item-button">
-                                        <button class="pricing__btn button__item"> buy now </button>
-                                    </div>
+                            <div class="pricing__item ">
+                                <h3 class="pricing__item-title"> professional</h3>
+                                <div class="pricing__item-cost">
+                                    <p>$299<span>/Month</span></p>
                                 </div>
+                                <ul class="pricing__item-list">
+                                    <li class="pricing__item-list-item"> 1 hosting</li>
+                                    <li class="pricing__item-list-item"> 2 email marketing</li>
+                                    <li class="pricing__item-list-item"> 5 datsbase</li>
+                                    <li class="pricing__item-list-item"> 2 Design pack</li>
+                                    <li class="pricing__item-list-item"> 3 website layout </li>
+                                    <li class="pricing__item-list-item"> 5 header stile</li>
+                                    <li class="pricing__item-list-item"> 3 online store</li>
+                                </ul>
+                                <div class="pricing__item-button">
+                                    <a href="#" class="pricing__btn button__item"> buy now </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="pricing__inner col-md-6 col-lg-3">
-                                <div class="pricing__item ">
-                                    <h3 class="pricing__item-title"> diamond</h3>
-                                    <div class="pricing__item-cost">
-                                        <p>$299<span>/Month</span></p>
-                                    </div>
-                                    <ul class="pricing__item-list">
-                                        <li class="pricing__item-list-item"> 1 hosting</li>
-                                        <li class="pricing__item-list-item"> 2 email marketing</li>
-                                        <li class="pricing__item-list-item"> 5 datsbase</li>
-                                        <li class="pricing__item-list-item"> 2 Design pack</li>
-                                        <li class="pricing__item-list-item"> 3 website layout </li>
-                                        <li class="pricing__item-list-item"> 5 header stile</li>
-                                        <li class="pricing__item-list-item"> 3 online store</li>
-                                    </ul>
-                                    <div class="pricing__item-button">
-                                        <button class="pricing__btn button__item"> buy now </button>
-                                    </div>
+                            <div class="pricing__item ">
+                                <h3 class="pricing__item-title"> diamond</h3>
+                                <div class="pricing__item-cost">
+                                    <p>$299<span>/Month</span></p>
                                 </div>
+                                <ul class="pricing__item-list">
+                                    <li class="pricing__item-list-item"> 1 hosting</li>
+                                    <li class="pricing__item-list-item"> 2 email marketing</li>
+                                    <li class="pricing__item-list-item"> 5 datsbase</li>
+                                    <li class="pricing__item-list-item"> 2 Design pack</li>
+                                    <li class="pricing__item-list-item"> 3 website layout </li>
+                                    <li class="pricing__item-list-item"> 5 header stile</li>
+                                    <li class="pricing__item-list-item"> 3 online store</li>
+                                </ul>
+                                <div class="pricing__item-button">
+                                    <a href="#" class="pricing__btn button__item"> buy now </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial" class="testimonial section">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title title__white col-md-8 offset-md-2 col-lg-6 offset-lg-3"> What People Say About theHam
+                    </h2>
+                </div>
+                <div class="fade testimonial__slider">
+                    <div class="testimonial__slider-item">
+                        <div class="testimonial__slider-item-text">
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum
+                                odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies
+                                luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio
+                                eget aliquam facilisis.</p>
+                        </div>
+                        <div class="testimonial__slider-item-person active">
+                            <h3 class="testimonial__slider-item-person-name"> Andy Black  </h3>
+                            <span class="testimonial__slider-item-person-role"> Java Developer </span>
+                            <div class="testimonial__slider-item-person-img">
+                                <img src="img/testimonial-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__slider-item active">
+                        <div class="testimonial__slider-item-text">
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, possimus. Quam in omnis architecto earum placeat magni asperiores porro! Inventore veritatis dicta blanditiis assumenda laborum perspiciatis hic voluptatem quia unde? </p>
+                        </div>
+                        <div class="testimonial__slider-item-person">
+                            <h3 class="testimonial__slider-item-person-name"> Jeremy Grey </h3>
+                            <span class="testimonial__slider-item-person-role"> Marketing manager </span>
+                            <div class="testimonial__slider-item-person-img">
+                                <img src="img/testimonial-img-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__slider-item">
+                        <div class="testimonial__slider-item-text">
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum
+                                odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies
+                                luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio
+                                eget aliquam facilisis.</p>
+                        </div>
+                        <div class="testimonial__slider-item-person">
+                            <h3 class="testimonial__slider-item-person-name"> Hasan Ali </h3>
+                            <span class="testimonial__slider-item-person-role"> UX Designer </span>
+                            <div class="testimonial__slider-item-person-img">
+                                <img src="img/testimonial-img-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__slider-item">
+                        <div class="testimonial__slider-item-text">
+                            <p>Integer dignissim, augue tempus ultricies luctus, quam dui laoreet sem, non dictum
+                                odio nisi quis massa. Morbi pulvinar odio eget aliquam facilisis. Tempus ultricies
+                                luctus, quam dui laoreet sem, non dictum odio nisi quis massa. Morbi pulvinar odio
+                                eget aliquam facilisis.</p>
+                        </div>
+                        <div class="testimonial__slider-item-person">
+                            <h3 class="testimonial__slider-item-person-name"> Ann Maccalister </h3>
+                            <span class="testimonial__slider-item-person-role"> Web Designer </span>
+                            <div class="testimonial__slider-item-person-img">
+                                <img src="img/testimonial-img-4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__slider-item">
+                        <div class="testimonial__slider-item-text">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe amet enim voluptatibus, aperiam expedita nobis porro eaque omnis quia in. Recusandae, molestiae assumenda. Hic distinctio dolores, at accusamus consequatur libero!</p>
+                        </div>
+                        <div class="testimonial__slider-item-person">
+                            <h3 class="testimonial__slider-item-person-name"> Tom Hanks </h3>
+                            <span class="testimonial__slider-item-person-role"> CEO </span>
+                            <div class="testimonial__slider-item-person-img">
+                                <img src="img/testimonial-img-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="images_dotted"> 
+                    <li class="testimonial__slider-item-person-img">
+                        <img src="img/testimonial-img-1.jpg" alt="">
+                    </li>       
+                    <li class="testimonial__slider-item-person-img">
+                        <img src="img/testimonial-img-2.jpg" alt="">
+                    </li>
+                    <li class="testimonial__slider-item-person-img active">
+                        <img src="img/testimonial-img-3.jpg" alt="">
+                    </li>     
+                    <li class="testimonial__slider-item-person-img">
+                        <img src="img/testimonial-img-4.jpg" alt="">
+                    </li>    
+                    <li class="testimonial__slider-item-person-img">
+                        <img src="img/testimonial-img-5.jpg" alt="">
+                    </li>   
+                </ul>
+            </div>
+        </section>
+
+        <section id="team" class="team section">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title title__black col-md-8 offset-md-2 col-lg-6 offset-lg-3"> Meat Our team </h2>  
                 </div>
             </div>
         </section>
@@ -1200,6 +1346,7 @@
     <script src="js/slick.min.js"></script>
     <!-- <script src="js/jquery.accordion.js"></script> -->
     <script src="js/jquery.tabs.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

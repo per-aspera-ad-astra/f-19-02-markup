@@ -112,7 +112,6 @@
     }
     &__btn {
         background: #2e4a5b;
-        border: 0;
         width: 140px;
         outline: none;
 
@@ -130,6 +129,7 @@
     .pricing__item {
         position: relative;
         z-index: 3;
+        border: 0;
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 
        &::after {

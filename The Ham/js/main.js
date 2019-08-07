@@ -1,16 +1,9 @@
 $(document).ready(function() {
 
+  // Animation
+  new WOW().init();
 
-  // Load more button
-  var $items = $('.work__item:gt(11)');
-  $items.hide();
-  $('.work__item-btn').click(function() {
-    $items.slideToggle(500);
-    var $btn = $(this);
-    $btn.text($btn.text() == 'Load less' ? 'Load more' : 'Load less');
-  });
-
-  // Filter
+// Filter
 
   var $grid = $('.grid').isotope({  
   });
@@ -18,6 +11,7 @@ $(document).ready(function() {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
   });
+
 
   // Burger
   $('.burger').on('click', function(e){
@@ -45,6 +39,7 @@ $(document).ready(function() {
   .not('[href="#"]')
   .not('[href="#0"]')
   .not ('[href^="#item"]')
+  .not ('[href^="#about-link__"]')
   .click(function(event) {
     // On-page links
     if (
@@ -87,26 +82,60 @@ $(document).ready(function() {
   });
   $("#dateplaceholder").attr("type", "text");
 
+
+  // Slider
   $(".lazy").slick({
-    // dots: false,
-    // arrows : true,
-    // infinite: true,
-    // slidesToShow: 2,
-    // slidesToScroll: 1,
-    // speed: 800,
-    // lazyLoad: 'ondemand',
-    // autoplay: true,
-    // autoplaySpeed: 1500,
-    // responsive: [
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         slidesToShow: 1,
-    //         autoplay: false,
-    //       }
-    //     }
-    //   ]
+    dots: false,
+    arrows : true,
+    slidesToShow: 1,
+    autoplay: false,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows:false,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+      },
+  }]
   });
+
+  $(".fade").slick({
+    infinite: true,
+    arrows: true,
+    autoplay: false,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    asNavFor: '.images_dotted', // указываем что навигация для слайдера будет отдельно (указываем класс куда вешаем навигацию)
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        dots: false,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+  }]
+
+  });
+
+  $('.images_dotted').slick({ // настройка навигации
+    slidesToShow: 4, // указываем что нужно показывать 3 навигационных изображения
+    asNavFor: '.fade', // указываем что это навигация для блока выше
+    focusOnSelect: true, // указываем что бы слайделось по клику
+    arrows : false,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        arrows: false,
+        dots: false,
+      },
+  }]
+});
+
 
 //Tabset
 jQuery(function(){
@@ -121,4 +150,90 @@ function initTabs() {
 		// tabLinks: 'a'
 	});
 }
-})
+
+// Isotope 
+
+var initial_items = 12;
+var next_items = 4;
+var $grid = $('#grid').isotope({
+    itemSelector: '.work__item',
+    layoutMode: 'masonry',
+    stamp: '.work__item--static'
+});
+
+// bind filter button click
+$('.button-group-home').on('click', 'button', function () {
+  var filterValue = $(this).attr('data-filter');
+  // use filterFn if matches value
+  $grid.isotope({filter: filterValue});
+  updateFilterCounts();
+});
+function updateFilterCounts() {
+  // get filtered item elements
+  var itemElems = $grid.isotope('getFilteredItemElements');
+  var count_items = $(itemElems).length;
+ 
+  if (count_items > initial_items) {
+      $('#showMore').show();
+  }
+  else {
+      $('#showMore').hide();
+  }
+  if ($('.work__item').hasClass('visible_item')) {
+      $('.work__item').removeClass('visible_item');
+  }
+  var index = 0;
+
+  $(itemElems).each(function () {
+      if (index >= initial_items) {
+          $(this).addClass('visible_item');
+      }
+      index++;
+  });
+  $grid.isotope('layout');
+}
+// change is-checked class on buttons
+$('.button-group-home').each(function (i, buttonGroup) {
+  var $buttonGroup = $(buttonGroup);
+  $buttonGroup.on('click', 'button', function () {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+  });
+});
+
+function showNextItems(pagination) {
+  var itemsMax = $('.visible_item').length;
+  var itemsCount = 0;
+  $('.visible_item').each(function () {
+      if (itemsCount < pagination) {
+          $(this).removeClass('visible_item');
+          itemsCount++;
+      }
+  });
+  if (itemsCount >= itemsMax) {
+      $('#showMore').hide();
+  }
+  $grid.isotope('layout');
+}
+// function that hides items when page is loaded
+function hideItems(pagination) {
+  var itemsMax = $('.work__item').length;
+  var itemsCount = 0;
+  $('.work__item').each(function () {
+      if (itemsCount >= pagination) {
+          $(this).addClass('visible_item');
+      }
+      itemsCount++;
+  });
+  if (itemsCount < itemsMax || initial_items >= itemsMax) {
+      $('#showMore').hide();
+  }
+  $grid.isotope('layout');
+}
+$('#showMore').on('click', function (e) {
+  e.preventDefault();
+  showNextItems(next_items);
+});
+hideItems(initial_items);
+
+});

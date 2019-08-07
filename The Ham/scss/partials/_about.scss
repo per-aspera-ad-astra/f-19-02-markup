@@ -5,7 +5,6 @@
     @include screen (lg) { 
         .title {
             display: inline-block;
-            margin-left: 30px;
             text-align: left; 
         }
     }
@@ -13,9 +12,9 @@
     &.section {
         padding-bottom: 0;
 
-        @include screen (md) {
-            padding-bottom: 30px;
-        }
+        // @include screen (md) {
+        //     padding-bottom: 30px;
+        // }
 
         @include screen (xl) {
             padding-bottom: 50px;
@@ -26,11 +25,11 @@
         }
     }
 
-
     &__img {
         padding-top: 18px;
+        max-width: 80%;
 
-        @include screen (md) {
+        @include screen (lg) {
             position: absolute;
             width: 45%;
             bottom: 0;
@@ -38,117 +37,212 @@
         }   
     }
 
-    &__links{
+    .tabset {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+        padding-top: 45px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #f5f5f5;
 
-        &-list {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            padding-top: 45px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #f5f5f5;
+        @include screen (lg) {
+            justify-content: flex-start;
+            max-width: fit-content;
+            margin-bottom: 60px;
+            margin-right: 0;
+            margin-left: 0;
+            padding-top: 75px;
+            font-size: 16px;   
+        }
 
-            @include screen (lg) {
-                justify-content: flex-start;
-                margin-bottom: 60px;
-                padding-top: 75px;
-                font-size: 16px;   
+        &__item-opener {
+            position: relative;
+            padding-top: 5px;
+            text-align: center;
+
+            @include screen (sm) {
+                margin-right: 15px;
             }
         
-            &-item {
-                position: relative;
-                padding-top: 5px;
-                margin-right: 10px;
-                text-align: center;
-
-                @include screen (lg) {
-                    padding-top: 10px;
-                    margin-right: 20px;
-                    text-align: left;
-                }
-
-                &:hover, 
-                &.active {
-                    color: $color-green;
-                }
-
-                &:hover::after,
-                &.active::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background:  $color-green;
-                }
+            @include screen (lg) {
+                padding-top: 10px;
+                margin-right: 20px;
+                text-align: left;
+            }
+        
+            &:hover, 
+            &.active {
+                color: $color-green;
+            }
+        
+            &.active::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background:  $color-green;
             }
         }
     }
 
-    &__skills{
-        &-item {
+    .tab-list {
+        min-height: 200px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #bebebe;
+  
+        @include screen (md) {
+          min-height: 280px;
+          font-size: 14px;
+          line-height: 1.8;         
+        }
+        @include screen (lg) {
+            min-height: 380px;  
+        }
+
+        @include screen (xl) {
+            min-height: 280px;  
+        }
+  
+        &__history {
+  
+  
+            &-list {
+              padding-top: 20px;
+              @include screen (sm) {
+                  column-count: 2;
+                  padding-top: 40px;
+              }
+  
+                &-item {
+                  position: relative;
+                  padding: 5px 0 5px 20px;
+  
+                  @include screen (md) {
+                      padding-left: 40px
+                  }
+  
+  
+                  &::after{
+                      content: '';
+                      position: absolute; 
+                      left: 0;
+                      top:50%;
+                      transform: translateY(-50%);
+                      width: 15px;
+                      height: 15px;
+                      background: url(../../img/about-icon-checked.png) center/cover no-repeat;
+  
+                      @include screen (md) {
+                          width: 23px;
+                          height: 23px;
+                      }
+                  }
+  
+                }
+            }
+        }
+  
+        &__biography{
+            p{
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+  
+        &__skills {
+          max-width: 555px;
+          color: #fff;
+        
+          &-item {
             position: relative;
-            width: 100%;
-            border-radius: 4px;
-            margin-bottom: 15px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 1px solid #959595;
-                border-radius: 5px;
+            padding: 10px 16px;
+            border: 1px solid #959595;
+            border-radius: 3px;
+            text-align: left;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+      
+            &:not(:last-child) {
+              margin-bottom: 14px;
             }
-
-            span {
-                display: flex;
-                position: relative;
-                z-index: 3;
-                height: 100%;
-                padding: 5px 10px;
-                outline: none;
-                font-family: $font-base;
-                color: #fff;
-                text-transform: uppercase;
-                border: 0;
-                border-radius: inherit;
-                font-size: 10px;
-
-                @include screen (md) {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    font-size: 13px;
-                }
-
-                &.interface {
-                    background: #9c5da5;
-                    width: 72%;
-                }
-
-                &.web-design {
-                    background: #11b0de;
-                    width: 84.7%;
-                }
-
-                &.wordpress {
-                    background: #d67f7f;
-                    width: 66%;
-                }
-
-                &.html-css {
-                    background: #20bc9d;
-                    width: 90%;
-                }
-
-                &.app-design {
-                    background: #bb8a36;
-                    width: 84.7%;
-                }
+        
+            &:nth-child(1) {
+              .tab-list__skills-item-line {
+                animation: 0.9s ease-in progress-first forwards;
+                background: #9c5da5;
+              }
             }
+            &:nth-child(2) {
+              .tab-list__skills-item-line {
+                animation: 0.9s ease-in progress-second forwards;
+                background: #11b0de;
+              }
+            }
+            &:nth-child(3) {
+              .tab-list__skills-item-line {
+                animation: 0.9s ease-in progress-third forwards;
+                background: #d67f7f;
+              }
+            }
+            &:nth-child(4) {
+              .tab-list__skills-item-line {
+                animation: 0.9s ease-in progress-fourth forwards;
+                background: #20bc9d;
+              }
+            }
+            &:nth-child(5) {
+              .tab-list__skills-item-line {
+                animation: 0.9s ease-in progress-fifth forwards;
+                background: #bb8a36;
+              }
+            }
+      
+            &-text {
+              position: relative;
+              z-index: 2;
+            }
+          
+            &-line {
+              position: absolute;
+              top: -1px;
+              left: -1px;
+              bottom: -1px;
+              border-radius: 3px;
+            }
+          }
         }
     }
 }
+
+
+  @keyframes progress-first {
+    @include progress-animation(72%);
+  }
+  
+  @keyframes progress-second {
+    @include progress-animation(85%);
+  }
+  
+  @keyframes progress-third {
+    @include progress-animation(67%);
+  }
+  
+  @keyframes progress-fourth {
+    @include progress-animation(90%);
+  }
+  
+  @keyframes progress-fifth {
+    @include progress-animation(84%);
+  }
