@@ -1,15 +1,9 @@
 .service {
     .tabs {
-        margin-top: 35px;
 
         @include screen (md){
-            margin-top: 50px;
             position: relative;
             padding: 0;
-        }
-
-        @include screen (lg) {
-            margin-top: 75px;           
         }
 
         .tabset {
@@ -24,6 +18,7 @@
     
             &__item {
                 background: #f8fcfe;
+                transition: 0.4s;
     
                 &:not(:last-child) {
                 border-bottom: 1px solid #eeeeef;
@@ -48,6 +43,7 @@
                     padding-top: 10px;
                     padding-bottom: 10px;
                     text-align: center;
+                    transition: 0.4s;
     
                     @include screen (md) {
                         font-size: 12px;

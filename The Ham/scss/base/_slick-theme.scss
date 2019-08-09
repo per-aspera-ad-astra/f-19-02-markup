@@ -63,7 +63,7 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev,
 .slick-next {
     position: absolute;
-    display: block;
+    display: none;
     height: 60px;
     width: 60px;
     background: #3c4140;
@@ -75,6 +75,11 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     border: none;
     outline: none;
+    transition: 0.4s;
+
+    @include screen (md) {
+        display: block;
+    }
     &:hover, &:focus {
         outline: none;
         background: $color-green;
@@ -108,12 +113,12 @@ $slick-opacity-not-active: 0.25 !default;
         color: rgba($color: #000000, $alpha: .0);
         width: 100%;
         height: 15px;
-        background: url(../images/left-arrow.svg) no-repeat;
+        background: url(../img/left-arrow.svg) no-repeat;
         [dir="rtl"] & {
             content: '';
             width: 15px;
             height: 15px;
-            background: url(../images/left-arrow.svg) no-repeat;
+            background: url(../img/left-arrow.svg) no-repeat;
         }
     }
 }
@@ -129,7 +134,7 @@ $slick-opacity-not-active: 0.25 !default;
         color: rgba($color: #000000, $alpha: .0);
         width: 100%;
         height: 15px;
-        background: url(../images/right-arrow.svg) no-repeat;
+        background: url(../img/right-arrow.svg) no-repeat;
         [dir="rtl"] & {
             content: $slick-prev-character;
         }

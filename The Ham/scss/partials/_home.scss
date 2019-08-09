@@ -1,11 +1,19 @@
 .home {
-    padding: 140px 20px 80px;
+    padding: 100px 20px 60px;
     background: #000 url(../img/bg-home.jpg) center/cover no-repeat;
+    height: 100vh;
 
     @include screen(md) {
-        padding: 220px 10px 140px;     
+        padding: 140px 10px 80px;     
     }
     @include screen(lg) {
+        padding: 150px 0 100px;     
+    }
+    @include screen(xl) {
+        padding: 200px 0 170px;     
+    }
+
+    @include screen(1900px) {
         padding: 340px 0 240px;     
     }
 
@@ -18,7 +26,7 @@
     }
 
     &__inner {
-        padding: 0 0 60px;
+        padding: 0 0 40px;
         font-weight: 300;
         font-size: 20px;
         color: #d4d4d4;
@@ -29,8 +37,12 @@
             padding-bottom: 80px;    
         }
         @include screen(lg) {
+            font-size: 30px;
+            padding-bottom: 70px;   
+        }
+        @include screen(xl) {
             font-size: 34px;
-            padding-bottom: 140px;   
+            padding-bottom: 100px;   
         }
 
         &-text {
@@ -59,7 +71,7 @@
                 font-size: 55px;    
             }
             @include screen(lg) {
-                font-size: 65px;   
+                font-size: 55px;   
             }
             @include screen(xl) {
                 font-size: 79px;   
@@ -73,15 +85,28 @@
         padding-top: 40px;
         padding-bottom: 20px;
 
-        @include screen (lg){
-            padding-top: 60px;  
+        // @include screen (lg){
+        //     padding-top: 60px;  
+        // }
+
+        @include screen (md){
+            position: absolute;
+            left: 55%;
+            top: 100%;
+            transform: translate(100%, -25%);
+            padding-top: 0;
         }
 
-        @include screen (2000px){
-            position: absolute;
+        @include screen (lg){
+            left: 65%;
+            transform: translate(100%, -100%);
+        }
+
+        @include screen (1900px){
             right: 0;
+            bottom: unset;
+            left: unset;
             transform: translate(100%, -50%);
-            padding-top: 0;
         }
 
         // &-item {

@@ -1,6 +1,10 @@
 @import "helpers/_mixins.scss";
 @import "helpers/_vars.scss";
 
+@import "animate/animate";
+
+@import "base/sweetalert2";
+
 @import "base/_bases.scss";
 @import "base/_bootstrap-grid.scss";
 @import "base/_fonts.scss";
@@ -21,3 +25,6 @@
 @import "partials/facts";
 @import "partials/pricing";
 @import "partials/testimonial";
+@import "partials/team";
+@import "partials/benefits";
+@import "partials/contacts";

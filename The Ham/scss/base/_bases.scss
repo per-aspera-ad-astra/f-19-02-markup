@@ -47,15 +47,21 @@ button {
     }
 }
 
+// Main titles
+
 .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
-    justify-content: space-between;
-    display: flex;
+    // justify-content: space-between;
+
 }
 .button__item {
     position: relative;
     display: inline-block;
+    max-width: 165px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding: 15px 0;
@@ -77,6 +83,14 @@ button {
         padding-top: 25px;
         padding-bottom: 25px;
 
+    }
+
+    &:nth-child(2){
+        margin-left: 15px;
+
+        @include screen (md) {
+            margin-left: 30px;
+        }
     }
 
     &-primary {
@@ -112,10 +126,11 @@ button {
     }
 }
 
-
+// Main titles
 
 .title {
     position: relative;
+    margin-bottom: 40px;
     padding-bottom: 20px;
     font-size: 26px;
     font-weight: 400;
@@ -131,12 +146,15 @@ button {
     }
 
     @include screen (md) {
-        font-size: 30px;
+        margin-bottom: 50px;
         padding-bottom: 25px;
+        font-size: 30px;
     }
     @include screen (lg) {
-        font-size: 36px;
+        margin-bottom: 75px;
         padding-bottom: 35px;
+        font-size: 36px;
+        
     }
 
     &::before,
@@ -158,9 +176,12 @@ button {
     }
 }
 
+// Paddings for every section
+
 .section {
     padding-top: 40px;
     padding-bottom: 40px;
+    outline: none;
 
     @include screen (md) {
         padding-top: 60px;
@@ -171,4 +192,52 @@ button {
         padding-bottom: 100px;
     }
 }
+
+// List with icons
+
+.style-list {
+    &-item {
+        position: relative;
+        padding: 5px 0 5px 20px;
+
+        @include screen (lg) {
+            padding: 10px 0 10px 40px;
+        }
+
+
+        &::after{
+            content: '';
+            position: absolute; 
+            left: 0;
+            top:50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: url(../img/about-icon-checked.png) center/cover no-repeat;
+
+            @include screen (lg) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+      }
+}
+
+// modal window {
+
+.swal2-confirm.swal2-styled {
+    background: $color-green;
+}
+
+.swal2-footer {
+    color: #294453;
+
+    a { 
+      &:hover {
+         border-bottom: 1px solid #294453;
+       }
+    }
+}
+
 

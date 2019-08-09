@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-  // Animation
+  // Adding Animation
+
   new WOW().init();
 
-// Filter
+// Filter for images (section work)
 
   var $grid = $('.grid').isotope({  
   });
@@ -32,6 +33,7 @@ $(document).ready(function() {
       $('.header').removeClass('black');
     }
   })
+
 
   // Scroll
 
@@ -83,7 +85,7 @@ $(document).ready(function() {
   $("#dateplaceholder").attr("type", "text");
 
 
-  // Slider
+  // Sliders 
   $(".lazy").slick({
     dots: false,
     arrows : true,
@@ -138,6 +140,7 @@ $(document).ready(function() {
 
 
 //Tabset
+
 jQuery(function(){
 	initTabs();
 });
@@ -151,13 +154,13 @@ function initTabs() {
 	});
 }
 
-// Isotope 
+// Isotope (section work)
 
 var initial_items = 12;
 var next_items = 4;
 var $grid = $('#grid').isotope({
     itemSelector: '.work__item',
-    layoutMode: 'masonry',
+    layoutMode: 'fitRows',
     stamp: '.work__item--static'
 });
 
@@ -235,5 +238,56 @@ $('#showMore').on('click', function (e) {
   showNextItems(next_items);
 });
 hideItems(initial_items);
+
+// Modal window 
+
+$("#purchase-modal").click(function(){
+  Swal.fire({
+    type: 'error',
+    title: 'Oops...',
+    text: 'Something went wrong!',
+    footer: '<a href> Reload a webpage to fix the problem ?</a>'
+  })
+});
+
+$(".benefits-modal").click(function(){
+  (async () => {
+
+    const { value: email } = await Swal.fire({
+      title: 'Enter your email address',
+      input: 'email',
+      inputPlaceholder: 'Email address'
+    })
+    
+    if (email) {
+      Swal.fire('Entered email: ' + email)
+    }
+
+    const { value: accept } = await Swal.fire({
+      title: 'Terms and conditions',
+      input: 'checkbox',
+      inputValue: 1,
+      inputPlaceholder:
+        'I agree with the terms and conditions',
+      footer: '<a class="red" target="_blank" href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/"> I want to read terms and conditions </a>',
+      confirmButtonText: 
+        'Continue <i class="fa fa-arrow-right></i>',
+      inputValidator: (result) => {
+        return !result && 'You need to agree with terms and conditions.'
+      }
+    })
+    
+    if (accept) {
+      Swal.fire('You agreed with terms and conditions :) <br>  We will sent you company proposition via email!')
+    }
+
+    })()
+
+});
+
+
+$('.red').click(function(){
+  window.open('_blank');
+});
 
 });

@@ -1,8 +1,5 @@
 .pricing {
 
-    &-content {
-        padding-top: 75px;
-    }
 
     &-table {
         justify-content: center;
@@ -28,6 +25,16 @@
             margin-bottom: 0;
             }
         } 
+
+        &:hover {
+            .pricing__item-title{
+                color: $color-green;
+            }
+            .pricing__item-cost,
+            .pricing__btn {
+                background-color: $color-green;
+            }
+        }
     }
 
     &__item {
@@ -42,6 +49,7 @@
             font-size: 16px;
             color: #717171;
             text-transform: uppercase;
+            transition: .3s;
 
             @include screen (md) {
                 padding-top:15px;
@@ -62,6 +70,7 @@
             color: #fff;
             font-weight: bold;
             font-size: 22px;
+            transition: .3s;
 
             @include screen (md) {
                 padding-top: 22px;
@@ -119,9 +128,9 @@
             width: 170px;          
         }
 
-        &:hover {
-            background: lighten(#2e4a5b, 30%);
-        }
+        // &:hover {
+        //     background: darken(#2e4a5b, 30%);
+        // }
     }
 }
 
@@ -139,7 +148,7 @@
            right: -2px;
            width: 42px;
            height: 41px;
-           background: url(../../img/pricing-decoration.png) center/cover no-repeat;
+           background: url(../img/pricing-decoration.png) center/cover no-repeat;
 
            @include screen (md) {
             width: 52px;

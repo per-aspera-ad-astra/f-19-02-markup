@@ -29,6 +29,7 @@
             border: 0;
             text-transform: capitalize;
             outline: none;
+            transition: 0.4s;
 
             @include screen (sm) {
                 padding: 20px 25px;    
