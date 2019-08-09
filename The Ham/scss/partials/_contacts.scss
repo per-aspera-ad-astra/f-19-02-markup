@@ -28,6 +28,7 @@
             color: #90aebd;
             border: 1px solid #dbe5e3;
             outline: none;
+            resize: none;
 
             @include screen (md) {
                 margin-bottom: 15px;

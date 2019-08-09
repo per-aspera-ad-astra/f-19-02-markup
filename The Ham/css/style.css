@@ -2040,8 +2040,8 @@ button {
 }
 
 .button__item-primary:hover {
-  background: #fff;
-  color: #18cfab;
+  background: #8ef2de;
+  color: #08463a;
 }
 
 .button__item-secondary {
@@ -2049,8 +2049,8 @@ button {
 }
 
 .button__item-secondary:hover {
-  background: #fff;
-  color: #00cbf6;
+  background: #90ecff;
+  color: #004d5d;
 }
 
 .button__item-hover::before {
@@ -7216,9 +7216,10 @@ textarea {
 }
 
 .home {
-  padding: 100px 20px 60px;
-  background: #000 url(../img/bg-home.jpg) center/cover no-repeat;
   height: 100vh;
+  padding: 100px 20px 60px;
+  background: rgba(0, 0, 0, 0.5) url(../img/bg-home.jpg) center/cover no-repeat;
+  background-blend-mode: overlay;
 }
 
 @media screen and (min-width: 768px) {
@@ -9088,7 +9089,6 @@ textarea {
           backface-visibility: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  cursor: pointer;
 }
 
 .team__item-img img {
@@ -9129,6 +9129,7 @@ textarea {
   display: block;
   height: 65px;
   width: 65px;
+  cursor: pointer;
 }
 
 .team__item-img-hover-link::after {
@@ -9202,6 +9203,7 @@ textarea {
   display: block;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1200px) {
@@ -9397,6 +9399,7 @@ textarea {
   color: #90aebd;
   border: 1px solid #dbe5e3;
   outline: none;
+  resize: none;
 }
 
 @media screen and (min-width: 768px) {

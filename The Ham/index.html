@@ -19,12 +19,12 @@
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__list-item"><a href="#home">Home</a></li>
+                    <li class="menu__list-item"><a href="#features">skills</a></li>
                     <li class="menu__list-item"><a href="#about">about</a></li>
-                    <li class="menu__list-item"><a href="#skills">skills</a></li>
-                    <li class="menu__list-item"><a href="#service">service</a></li>
                     <li class="menu__list-item"><a href="#work">work</a></li>
+                    <li class="menu__list-item"><a href="#service">service</a></li>
+                    <li class="menu__list-item"><a href="#news">blog</a></li>
                     <li class="menu__list-item"><a href="#testimonial">testimonial</a></li>
-                    <li class="menu__list-item"><a href="#blog">blog</a></li>
                     <li class="menu__list-item"><a href="#team">team</a></li>
                     <li class="menu__list-item"><a href="#contacts">contact</a></li>
                 </ul>
@@ -33,11 +33,11 @@
                 <span></span>
             </button>
             <div class="search">
-                <button class="search-btn">
+                <div class="search-btn">
                     <a class="search-btn-icon" href="#"> <img src="img/search.svg" alt=""></a>
-                </button>
+                </div>
                 <div class="search__area">
-                    <input class="search__area-txt" type="text" name="" placeholder="Type and search...">
+                    <input class="search__area-txt" type="text" placeholder="Type and search...">
                     <a class="search__area-icon" href="#"> <img src="img/search-icon.svg" alt=""></a>
                 </div>
             </div>
@@ -55,8 +55,8 @@
                         <p>Just Buy And Enjoy These Awesome Features</p>
                     </div>
                     <div class="buttons col-sm-6 offset-sm-3 col-lg-4 offset-lg-4">
-                        <a href="" class="button__item button__item-primary button__item-hover"> Explore now</a>
-                        <a href="" class="button__item button__item-secondary button__item-hover"> Purchase now</a>
+                        <a href="#pricing" class="button__item button__item-primary button__item-hover"> Explore now</a>
+                        <a class="purchase-modal button__item button__item-secondary button__item-hover"> Purchase now</a>
                     </div>
                 </div>
                 <div class="lazy slider home__slider">
@@ -105,9 +105,9 @@
             </div>
         </section>
 
-        <section class="features section">
+        <section class="features section" id="features"> 
             <div class="container">
-                <h2 class="title title__black wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> Creative amazing Feautures
+                <h2 class="title title__black wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> Creative amazing Features
                 </h2>
                 <div class="row">
                     <div class="features__item col-md-4">
@@ -285,7 +285,6 @@
             <div class="container">
 
                 <h2 class="title title__black  wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> Our amazing work </h2>
-                </h2>
 
                 <div class="button-group-home filters-button-group work__list button-group filter-button-group">
                     <button class="button is-checked work__list-item" data-filter="*">all</button>
@@ -943,7 +942,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
         <section class="purchase section">
@@ -955,13 +953,13 @@
                 </div>
                 <div class="row">
                     <div class="buttons col-6 offset-3 col-sm-4 offset-sm-4 col-lg-2 offset-lg-5">
-                        <a id="purchase-modal" class="button__item button__item-primary button__item-hover"> purchase now</a>
+                        <a class=" purchase-modal button__item button__item-primary button__item-hover"> purchase now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="news section">
+        <section class="news section" id="news">
             <div class="container">
 
                 <h2 class="title title__black  wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> Breaking news </h2>
@@ -1155,7 +1153,7 @@
             </div>
         </section>
 
-        <section class="pricing section">
+        <section class="pricing section" id="pricing">
             <div class="container">
 
                 <h2 class="title title__black wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> our pricing table </h2>
@@ -1249,10 +1247,7 @@
 
         <section id="testimonial" class="testimonial section">
             <div class="container">
-
-                <h2 class="title title__white wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> What People Say About theHam
-
-            </div>
+                <h2 class="title title__white wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> What People Say About theHam </h2>
             <div class="fade testimonial__slider">
                 <div class="testimonial__slider-item">
                     <div class="testimonial__slider-item-text">
@@ -1350,9 +1345,7 @@
 
         <section id="team" class="team section">
             <div class="container">
-
                 <h2 class="title title__black  wow fadeInUp" data-wow-delay="0.1s" data-wow-duratin="0.9s"> Meat Our team </h2>
-
                 <div class="row">
                     <div class="team__wrapper col-sm-6 col-lg-3">
                         <div class="team__item">
@@ -1444,7 +1437,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
         <section class="benefits section">
@@ -1481,9 +1473,9 @@
                         </h2>
                         <div class="contacts__inner">
                             <form action="#" class="contacts__form">
-                                <input type="text" placeholder="Name">
-                                <input type="email" placeholder="Email">
-                                <textarea cols="30" rows="6" placeholder="Message"></textarea>
+                                <input type="text" placeholder="Name" required>
+                                <input type="email" placeholder="Email" required>
+                                <textarea cols="30" rows="6" placeholder="Message" required ></textarea>
                                 <button type="submit" class="button__item button__item-primary button__item-hover"> Send
                                     Request </button>
                             </form>
@@ -1614,7 +1606,6 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <!-- <script src="js/jquery.accordion.js"></script> -->
     <script src="js/jquery.tabs.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>

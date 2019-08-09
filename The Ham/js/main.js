@@ -241,7 +241,7 @@ hideItems(initial_items);
 
 // Modal window 
 
-$("#purchase-modal").click(function(){
+$(".purchase-modal").click(function(){
   Swal.fire({
     type: 'error',
     title: 'Oops...',
@@ -278,7 +278,7 @@ $(".benefits-modal").click(function(){
     })
     
     if (accept) {
-      Swal.fire('You agreed with terms and conditions :) <br>  We will sent you company proposition via email!')
+      Swal.fire('You agreed with terms and conditions :) <br>  We will send you the best offers from our company via email!')
     }
 
     })()

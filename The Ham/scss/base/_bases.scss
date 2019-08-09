@@ -47,7 +47,7 @@ button {
     }
 }
 
-// Main titles
+// Main buttons
 
 .buttons {
     display: flex;
@@ -97,8 +97,8 @@ button {
         background: $color-green;
 
         &:hover {
-            background: #fff;
-            color: $color-green;
+            background: lighten($color-green, 30%);
+            color: darken($color-green, 30%);
         }
     }
 
@@ -106,8 +106,8 @@ button {
         background: #00cbf6;
 
         &:hover {
-            background: #fff;
-            color: #00cbf6;
+            background: lighten(#00cbf6, 30%);
+            color: darken(#00cbf6, 30%);
         }
     }
 
