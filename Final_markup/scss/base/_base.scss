@@ -1,0 +1,98 @@
+body {
+ font: 14px/1.5 $font-main;
+ color: $color-font;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include screen(md) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  @include screen(md) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.section-title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  color: #4e4e4e;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: center;
+
+  @include screen(md) {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  @include screen(xl) {
+    margin-bottom: 70px;
+    font-size: 36px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height:5px;
+    background: url(../img/title-decor.png) no-repeat;
+  }
+  
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 20px 11px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 0px -5px 0px 0px rgba(255,255,255,1);
+  transition: 0.3s;
+  margin-bottom: 20px;
+
+  &_mint {
+    background: $color-mint;
+
+    &:hover {
+      background: darken($color-mint, 10%);
+    }
+  }
+
+  &_blue {
+    background: #00cbf6;
+
+    &:hover {
+      background: darken(#00cbf6, 10%);
+    }
+  }
+}

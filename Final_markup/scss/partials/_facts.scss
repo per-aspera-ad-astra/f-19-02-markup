@@ -1,0 +1,150 @@
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+
+    @include screen (md) {
+        font-size: 28px;
+    }
+    @include screen (1800px) {
+        font-size: 36px; 
+    }
+}
+
+&__text {
+    font-weight: 300;
+
+    @include screen (md) {
+        font-size: 16px;
+    }
+    @include screen (1800px) {
+        font-size: 18px; 
+    }
+
+    &-dark{
+    color: $color-mint;
+    }
+
+    &-mint {
+        color: $color-dark;
+    }
+}
+
+
+
+  &__item {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 40px 15px;
+
+      @include screen (sm) {
+          width: 50%;  
+
+          &:nth-child(3) {
+              order: 1;
+          }
+      }
+
+      @include screen (md) {
+          width: 25%;  
+
+          &:nth-child(3) {
+              order: 0;
+          }
+      }
+
+      @include screen (lg) {         
+          padding: 70px 0 30px ;
+      }
+
+      @include screen (xl) {         
+          padding: 90px 0 50px;
+      }
+
+      &-dark {
+          background: $color-dark;
+          border-top: 8px solid $color-mint;
+      }
+
+      &-mint {
+          background: $color-mint;
+          border-top: 8px solid $color-dark;
+      }
+
+      &-img {
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 80px;
+          height: 80px;
+          margin-bottom: 30px;
+          border-radius: 50%;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          @include screen (sm) {
+            width: 95px;
+            height: 95px;
+            margin-bottom: 40px;
+        }
+
+        @include screen (xl) {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 50px;
+        }
+
+          
+        &::after {
+          content: '';
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+
+          @include screen (sm) {
+              width: 140px;
+              height: 140px;
+          }
+
+
+          @include screen (lg) {
+          width: 170px;
+          height: 170px;
+          }
+
+      }
+
+          &-dark {
+              background: $color-dark;
+
+              &::after {
+                  border: 2px solid $color-dark;
+              }
+          }
+          &-mint {
+              background: $color-mint; 
+
+              &::after {
+                  border: 2px solid $color-mint;
+              }
+          }
+      }
+  }
+
+}
+

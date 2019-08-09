@@ -1,0 +1,141 @@
+.pricing {
+  text-align: center;
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.3s;
+    
+    .offer {
+      position: absolute;
+      top: 15px;
+      right: -25px;
+      padding: 0 30px;
+      transform: rotate(45deg);
+      background: $color-mint;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+
+    @include screen(lg) {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        border-right: 0;
+      }
+    }
+
+    &-title {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #717171;
+      text-transform: uppercase;
+      transition: 0.3s;
+
+      @include screen(md) {
+        font-size: 20px;
+      }
+
+      @include screen(lg) {
+        font-size: 24px;
+      }
+    }
+
+    &-price {
+      padding-bottom: 6px;
+      color: #fff;
+      border-bottom: 1px solid #e1e1e1;
+
+      &_inner {
+        padding: 15px 0;
+        background: #2e4a5b;
+        transition: 0.3s;
+
+        @include screen(md) {
+          padding: 22px 0;
+        }
+
+        @include screen(lg) {
+          padding: 28px 0;
+        }
+
+        strong {
+          font-size: 24px;
+
+          @include screen(md) {
+            font-size: 30px;
+          }
+
+          @include screen(lg) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+    &-list {
+
+      li {
+        padding: 10px 0;
+        font-weight: 500;
+        border-bottom: 1px solid #e1e1e1;
+
+        @include screen(md) {
+          padding: 14px;
+        }
+
+        @include screen(lg) {
+          padding: 17px 0;
+        }
+      }
+    }
+  }
+
+  &__button-wrapper {
+    padding: 25px;
+
+    button {
+      padding: 20px 50px;
+      background: #2e4a5b;
+      color: #fff;
+      font-weight: bold;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: 0;
+      transition: 0.3s;
+    }
+  }
+
+}
+
+.pricing__item:hover {
+
+  box-shadow: 0px 0px 10px 0px rgba(119,119,119,0.5);
+
+  .pricing__item-title {
+    color: $color-mint;
+  }
+
+  .pricing__item-price_inner {
+    background: $color-mint;
+  }
+
+  .pricing__button-wrapper button {
+    background: $color-mint;
+  }
+
+  .offer {
+    opacity: 1;
+  }
+
+}

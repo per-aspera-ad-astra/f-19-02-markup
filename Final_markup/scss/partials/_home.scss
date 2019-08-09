@@ -1,0 +1,108 @@
+.home {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background: #2f2929 url(../img/bg-home.jpg) center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+
+  .container {
+    position: relative;
+  }
+
+
+  @include screen(md) {
+    padding-top: 190px;
+    padding-bottom: 150px;
+  }
+
+  @include screen(lg) {
+    padding-top: 260px;
+    padding-bottom: 240px;
+  }
+
+  &__pre-title {
+    font-size: 20px;
+
+    @include screen(md) {
+      font-size: 30px;
+    }
+
+    @include screen(lg) {
+      font-size: 35px;
+    }
+
+    & span {
+      color: $color-mint;
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+
+    @include screen(md) {
+      font-size: 60px;
+    }
+
+    @include screen(lg) {
+      font-size: 80px;
+    }
+  }
+
+  &__post-title {
+    display: block;
+    margin-bottom: 50px;
+    color: #d4d4d4;
+    font-size: 20px;
+    text-transform: capitalize;
+
+    @include screen(md) {
+      margin-bottom: 80px;
+      font-size: 30px;
+    }
+
+    @include screen(lg) {
+      margin-bottom: 140px;
+      font-size: 35px;
+    }
+  }
+
+  .buttons {
+    justify-content: center;
+
+    @include screen(sm) {
+      justify-content: stretch;
+    }
+  }
+
+  .button-wrapper {
+    max-width: 180px;
+  }
+
+  &__slider{
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    @include screen (lg) {
+      transform: translateX(10%);
+    } 
+
+    @include screen (xl) {
+      transform: translateX(-10%);
+    }
+
+
+    @include screen (1600px){
+        position: absolute;
+        right: 0;
+        transform: translate(100%, -50%);
+        padding-top: 0;
+    }
+}
+
+
+}

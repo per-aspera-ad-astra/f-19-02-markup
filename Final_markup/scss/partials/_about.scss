@@ -1,0 +1,254 @@
+.about {
+  position: relative;
+  background: url(../img/about-bg.jpg)center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+
+  @include screen(lg) {
+    text-align: left;
+  }
+
+  .section-title {
+    color: inherit;
+
+
+    &::before {
+      @include screen(lg) {
+        left: 30%;
+        transform: translateX(-30%);
+      }
+    }
+
+    @include screen(lg) {
+     text-align: left;
+    }
+  }
+
+  &__tabs {
+    height: 780px;
+
+    @include screen(sm) {
+      height: 740px;
+    }
+    @include screen(md) {
+      height: 770px;
+    }
+    @include screen(lg) {
+      height: 420px;
+    }
+    @include screen(xl) {
+      height: 340px;
+    }
+
+    &-nav {
+      margin-bottom: 20px;
+
+      @include screen(md) {
+        margin-bottom: 30px;
+      }
+
+      @include screen(lg) {
+        margin-bottom: 50px;
+      }
+      
+
+    }
+
+
+    &-head {
+      display: block;
+      padding: 5px 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include screen(sm) {
+        display: inline-block;
+      }
+
+      a {
+        transition: color 0.3s;
+        padding-top: 5px;
+        &:hover {
+         
+          color: $color-mint;
+        }
+
+      }
+
+      a.active {
+        color: $color-mint;
+        border-top: 1px solid $color-mint;
+      }
+    }
+  }
+
+  &__history {
+    font-weight: 300;
+    &-list {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include screen(lg) {
+          justify-content: stretch;
+          margin-left: -15px;
+        }
+ 
+        li {
+          padding: 2px 10px;
+
+          @include screen(xl) {
+            padding: 5px 10px;
+          }
+
+          i {
+            font-size: 20px;
+            color: $color-mint;
+          }
+        }
+      }
+      
+    }
+
+  }
+
+
+  &__biography {
+    p {
+      margin: 20px 0;
+    }
+  }
+
+
+  &__progress {
+    max-width: 555px;
+
+    .skill {
+      position: relative;
+      margin-bottom: 14px;
+      padding: 14px 16px;
+      border: 1px solid #959595;
+      border-radius: 3px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 600;
+    
+
+
+      &-item {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        border-radius: 3px;
+
+        &__text {
+          position: relative;
+          z-index: 100;
+        }
+      }
+
+      .interface {
+        background: #9c5da5;
+        animation: progress 1.2s ease-in-out forwards;
+      }
+
+      .design {
+        background: #11b0de;
+        animation: progress-2 1.2s ease-in-out forwards;
+      }
+
+      .wordpress {
+        background: #d67f7f;
+        animation: progress-3 1.2s ease-in-out forwards;
+      }
+
+      .html-css {
+        background: #20bc9d;
+        animation: progress-4 1.2s ease-in-out forwards;
+      }
+
+      .app {
+        background: #bb8a36;
+        animation: progress-5 1.2s ease-in-out forwards;
+      }
+    }
+  }
+
+
+
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include screen(lg) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include screen(xl) {
+      bottom: 0;
+    }
+
+    @include screen(2500px) {
+      left: 10%;
+    }
+    @include screen(4000px) {
+      left: 25%;
+    }
+  
+  }
+}
+
+
+// Keyframes
+
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 72%;
+  }
+}
+
+@keyframes progress-2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes progress-3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 66%;
+  }
+}
+
+@keyframes progress-4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes progress-5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 84%;
+  }
+}
+

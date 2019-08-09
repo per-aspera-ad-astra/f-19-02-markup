@@ -1,0 +1,195 @@
+.purchase {
+  background: url(../img/bg-purchase.jpg) center/cover no-repeat;
+  text-align: center;
+
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: $color-mint;
+    text-transform: uppercase;
+
+    @include screen(md) {
+      font-size: 32px;
+    }
+
+    @include screen(lg) {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #d8d8d8;
+    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+    }
+
+    @include screen(md) {
+      margin-bottom: 40px;
+    }
+
+    @include screen(lg) {
+      margin-bottom: 60px;
+    }
+
+    @include screen(xl) {
+      margin-bottom: 70px;
+    }
+  }
+
+
+  &__button-wrapper {
+    max-width: 180px;
+    text-align: center;
+    margin: 0 auto;
+
+
+    .btn {
+      display: block;
+      padding: 20px 10px;
+      color: #fff;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+// Modal
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1000000;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+
+
+/* Modal Content/Box */
+
+
+.modal {
+  &-content {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    color: #000;
+  }
+
+  p {
+    margin-bottom: 2em;
+    font-size: 18px;
+    color: #666;
+  }
+
+/* The Close Button */
+  button {
+    max-width: 150px;
+    margin: 0 auto;
+    font-size: 1.25em;
+    font-weight: bold;
+    font-family: inherit;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    padding: .5em 1em;
+    color: #000;
+    box-shadow: 0 0 0 2px $color-mint inset;
+    border-radius: .25em;
+    cursor: pointer;
+    transition: background .4s ease, color .4s ease;
+
+    &:hover {
+      color: #fff;
+      background-color: $color-mint;
+    }
+  }
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: #18cfab;
+  display: inline-block;
+  line-height: 1.15;
+}
+
+svg {
+  position: absolute;
+  top: -40px;
+  right: -18px;
+  width: 80px;
+  height: 80px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 226px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 4px;
+  stroke: #18cfab;
+  fill: none;
+  animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 226px;
+  }
+}
+
+
+
+
+
+
+

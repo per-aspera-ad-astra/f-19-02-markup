@@ -1,0 +1,316 @@
+.footer {
+  background: #1c2b33;
+  color: #b2b2b2;
+
+  &__feed {
+    text-align: center;
+    font-weight: 300;
+
+    @include screen(md) {
+      text-align: left;
+    }
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+
+      @include screen(md) {
+        margin-bottom: 40px;
+      }
+
+      @include screen(lg) {
+        margin-bottom: 50px;
+        font-size: 18px;
+      }
+    }
+
+    &-info {
+      margin-bottom: 40px;
+
+      @include screen(lg) {
+        margin-bottom: 0;
+      }
+
+      .info-title {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 28px;
+
+        @include screen(md) {
+          margin-top: -15px;
+          margin-bottom: 27px;
+          font-size: 34px;
+        }
+
+        @include screen(lg) {
+          margin-bottom: 35px;
+          font-size: 40px;
+        }
+        strong {
+          color: $color-mint;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      &_text {
+        p {
+          margin-top: 0;
+          margin-bottom: 40px;
+
+          @include screen(md) {
+            margin-bottom: 60px;
+          }
+
+          @include screen(lg) {
+            margin-bottom: 75px;
+          }
+        }
+      }
+
+      .address {
+        font-style: normal;
+
+        &_office {
+          margin-bottom: 25px;
+
+          @include screen(lg) {
+            margin-bottom: 35px;
+          }
+
+          span {
+            display: block;
+            margin-bottom: 10px;
+          }
+          p {
+            margin: 0;
+          }
+        }
+
+        &_links {
+          p {
+            margin: 3px 0;
+
+            a {
+              transition: 0.3s;
+
+              &:hover {
+                color: $color-mint;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-post {
+      margin-bottom: 40px;
+      text-align: left;
+
+      @include screen(lg) {
+        margin-bottom: 0;
+      }
+
+      .post__item {
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 25px;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+          border-bottom: 1px solid #294453;
+        }
+
+        &-img {
+          margin-right: 15px;
+        }
+
+        &-text {
+          span {
+            color: #f1f1f1;
+          }
+        }
+
+        &-title {
+          margin: 0;
+          color: #fff;
+          font-size: 14px;
+          text-transform: uppercase;
+
+          @include screen(md) {
+            font-size: 16px;
+          }
+
+          a {
+            transition: 0.3s;
+
+            &:hover {
+              color: $color-mint;
+            }
+          }
+        }
+      }
+    }
+
+    &-links {
+      margin-bottom: 50px;
+
+      @include screen(lg) {
+        margin-bottom: 0;
+      }
+
+      .tag-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #294453;
+
+        a {
+          display: inline-block;
+          margin-bottom: 6px;
+          margin-right: 6px;
+          width: 75px;
+          padding: 10px 15px;
+          border: 1px solid #d7d7d7;
+          transition: 0.3s;
+
+          &:hover {
+            background: $color-mint;
+            border-color: $color-mint;
+            color: #fff;
+          }
+        }
+      }
+
+      &_newsletter {
+        p {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+
+        .form-wrapper {
+          margin: 0 auto;
+          width: fit-content;
+
+          @include screen(md) {
+            margin: 0;
+          }
+
+          form {
+            display: flex;
+            // flex-wrap: wrap;
+            input[type="email"] {
+              padding: 15px;
+              background: #22353f;
+              border: 1px solid #22353f;
+              outline: 0;
+              transition: 0.3s;
+              @include placeholder(#6f7171, transparent);
+
+              @include screen(lg) {
+                width: 160px;
+              }
+
+              @include screen(xl) {
+                width: 100%;
+              }
+
+              &:focus {
+                border: 1px solid $color-mint;
+              }
+            }
+
+            button {
+              padding: 16px;
+              background: #294453;
+              color: $color-mint;
+              font-weight: bold;
+              border: 0;
+              outline: 0;
+              cursor: pointer;
+              transition: 0.3s;
+
+              &:hover {
+                background: lighten(#294453, 8%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-images {
+      .news {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include screen(md) {
+          justify-content: stretch;
+        }
+
+        @include screen(lg) {
+          justify-content: space-between;
+        }
+
+        a {
+          display: inline-block;
+          margin-bottom: 15px;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          @include screen(md) {
+            margin-right: 15px;
+          }
+
+          @include screen(lg) {
+            margin-bottom: 10px;
+            margin-right: 0;
+          }
+
+          @include screen(xl) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    padding: 25px 0;
+    background: #22353f;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+
+
+    @include screen(md) {
+      padding: 35px 0;
+    }
+
+    @include screen(lg) {
+      padding: 45px 0;
+      font-size: 14px;
+    }
+
+    p {
+      margin: 0;
+      span {
+        color: $color-mint;
+      }
+    }
+  }
+}

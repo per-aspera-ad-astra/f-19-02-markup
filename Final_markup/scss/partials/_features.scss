@@ -1,0 +1,41 @@
+.features {
+  
+  @include screen(lg) {
+    padding-bottom: 30px;
+  }
+
+  &__item {
+    
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include screen(lg) {
+        margin-bottom: 70px;
+      }
+    }
+    
+
+    &-title {
+      margin: 0;
+
+      @include screen (lg) {
+        font-size: 18px;
+     }
+    }
+
+    &-img {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+      }
+
+    }
+
+    &-text {
+      max-width: 335px;
+      font-weight: 300;
+    }
+  }
+}

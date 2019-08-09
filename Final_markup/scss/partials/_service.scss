@@ -1,0 +1,134 @@
+.service  {
+  &__tabs {
+
+     &-nav {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      
+
+      @include screen(md) {
+        margin-bottom: 30px;
+        width: fit-content;
+      }
+
+      @include screen(lg) {
+        background: #f8fcfe;
+        border: 1px solid #ebebeb;
+      }
+
+     }
+
+    &-head {
+      position: relative;
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      transition: color 0.2s;
+      cursor: pointer;
+      margin-left: -2px;
+      margin-right: -2px;
+
+      @include screen(md) {
+        display: inline-block;
+      }
+
+      &:hover {
+        color: $color-mint;
+      }
+
+      &.active {
+        background: $color-mint;
+        color: #fff;
+
+        &::after {
+        content: "";
+        position: absolute;
+        top: 100%; 
+        left: 50%;
+        transform: translateX(-50%); 
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 11px 0 11px;
+        border-color: #18cfaa transparent transparent transparent;          
+        }
+      }
+
+      &:not(:last-child) {
+        @include screen(xl) {
+          border-right: 1px solid #ebebeb;;
+        }
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 15px 10px;
+
+        @include screen(sm) {
+          padding: 15px 20px;
+        }
+  
+        @include screen(md) {
+          padding: 20px 50px;
+        }
+  
+        @include screen(lg) {
+          padding: 25px 20px;
+        }
+  
+        @include screen(xl) {
+          padding: 25px 44px;
+        }
+      }
+    }
+
+    &-stage {
+      height: 550px;
+
+      @include screen(sm) {
+        height: 450px;
+      }
+
+      @include screen(md) {
+        height: 280px;
+      }
+
+      @include screen(lg) {
+        height: 200px;
+      }
+
+      &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include screen(md) {
+          flex-direction: row;
+          align-items: center;
+        }
+
+
+        img {
+          margin-bottom: 20px;
+          
+
+          @include screen(md) {
+            margin-bottom: 0;
+            margin-right: 20px;
+          }
+        }
+        
+
+
+      }
+    }
+
+    &__text {
+      font-size: 13px;
+    }
+
+  }
+}

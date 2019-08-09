@@ -1,0 +1,26 @@
+@import "helpers/mixins";
+@import "helpers/vars";
+
+@import "base/normalize";
+@import "base/bootstap-grid";
+@import "base/fonts";
+@import "base/slider";
+@import "base/base";
+
+@import "partials/header";
+@import "partials/home";
+@import "partials/options";
+@import "partials/features";
+@import "partials/about";
+@import "partials/work";
+@import "partials/service";
+@import "partials/purchase";
+@import "partials/blog";
+@import "partials/facts";
+@import "partials/pricing";
+@import "partials/testimonials";
+@import "partials/team";
+@import "partials/purchase-2";
+@import "partials/contact";
+@import "partials/footer";
+

@@ -1,0 +1,159 @@
+.purchase-2 {
+  position: relative;
+  background: url(../img/volcano.jpg) center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+
+  @include screen(md) {
+    padding-bottom: 120px;
+  }
+
+  @include screen(1600px) {
+    padding-bottom: 140px;
+  }
+
+  @include screen(1800px) {
+    padding-bottom: 240px;
+  }
+
+  @include screen(2100px) {
+    padding-bottom: 390px;
+  }
+
+  @include screen(2400px) {
+    padding-bottom: 440px;
+  }
+
+  @include screen(2500px) {
+    padding-bottom: 640px;
+  }
+
+
+
+  &__title {
+    margin: 0;
+    font-size: 26px;
+    text-transform: uppercase;
+
+    @include screen(md) {
+      font-size: 32px;
+    }
+
+    @include screen(lg) {
+      font-size: 44px;
+    }
+
+    @include screen(xl) {
+      font-size: 51px;
+    }
+    
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: $color-mint;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    @include screen(md) {
+      font-size: 28px;
+    }
+
+    @include screen(lg) {
+      font-size: 39px;
+    }
+
+    @include screen(xl) {
+      font-size: 47px;
+    }
+  }
+
+
+  &__list {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+
+    @include screen(sm) {
+      display: block;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    @include screen(md) {
+      margin-top: 60px;
+      margin-bottom: 45px;
+    }
+
+    @include screen(lg) {
+      margin-top: 90px;
+      margin-bottom: 70px;
+    }
+
+    li {
+      display: block;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }
+
+      &:before {
+        content: '\e800';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -30px;
+        color: $color-mint;
+        font-family: 'fontello';
+        font-size: 24px;
+      }
+
+    
+    }
+  }
+
+  &__button-wrapper {
+    max-width: 165px;
+    color: #fff;
+    margin: 0 auto;
+    
+    @include screen(sm) {
+      transform: translateX(-20px);
+      margin: 0;
+    }
+
+    .btn {
+      padding: 20px 10px;
+    }
+  }
+
+  &__img {
+
+   
+    @include screen(sm) {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-10%);
+    }
+
+    @include screen(lg) {
+      top: 40%;
+    }
+
+    @include screen(xl) {
+      top: 40%;
+    }
+
+    @include screen(1600px) {
+      top: 35%;
+    }
+  }
+}
+
+.purchase-2__img.col-12.col-sm-6 {
+  padding: 0;
+}
