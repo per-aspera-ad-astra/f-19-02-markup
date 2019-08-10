@@ -1,0 +1,223 @@
+.footer {
+    font-family: $font-base;
+    line-height: 1.5;
+
+    &__head {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: #1c2b33;
+        font-size: 14px;
+        font-weight: normal;
+        color: $color-refs-nomain;
+
+        address {
+            padding-top: 50px;
+            font-style: normal;
+            
+            @include screen(md) {
+                padding-top: 65px;   
+            }
+            
+            @include screen(lg) {
+                padding-top: 80px;
+            }
+        }
+
+        a {
+            text-transform: lowercase;
+            transition: .3s; 
+           
+            &:hover {
+                color: $color-custom;
+            }
+        }
+
+        h5,
+        h6 {
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+           
+            @include screen(lg) {
+                text-align: left;
+             }
+        }
+
+        h5 {
+            font-size: 18px;
+        }
+
+        h6 {
+            font-size: 16px;
+            transition: .2s;
+           
+            @include screen(lg) {
+                text-align: left;
+             }
+        }
+        
+      
+        @include screen(sm) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
+    
+        @include screen(md) {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+        
+        @include screen(lg) {
+            padding-top: 105px;
+            padding-bottom: 105px;
+        }
+
+        @include screen(xl) {
+            padding-top: 125px;
+            padding-bottom: 125px;
+        }
+    }
+
+    &__item {
+
+        &:first-child a {
+            text-transform: capitalize;
+        }
+        margin: 15px auto;
+        word-spacing: -1px;
+        
+        @include screen(lg) {
+           margin-top: 0;
+           margin-bottom: 0;
+        }
+        
+        .date {
+            line-height: 2.5;
+            color: #fff;
+        }
+        line-height: 1.7;
+        
+    
+        &-logo {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        p,
+        a,
+        address,
+        &-inner {
+            text-align: center;
+
+            @include screen(lg) {
+                text-align: left;
+             }
+        }
+
+        &-inner  {
+        display: flex;
+        justify-content: center;
+        padding-top: 33px;
+        padding-bottom: 33px;
+
+        &:hover {
+            h6 {
+                color: $color-custom;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #294453;
+        }
+
+            &_img {
+                width:50%;
+                margin-right: 15px;
+                height: 66px;
+
+                img {
+                    width: 100%;
+                    height: 90%;
+                }
+            }
+
+                a {
+                    padding: 12px 13px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                    border: 1px solid #acacac;
+
+                    &:hover {
+                        box-shadow: 0 0 3px #fff;
+                    }
+                }
+         
+            &_newsletter {
+                flex-direction: column;
+
+                p {
+                    padding-top: 45px;
+                    padding-bottom: 20px;
+                }
+
+                .form-mail {
+
+                    div {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: 'go';
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: $color-custom;
+                            text-align: center;
+                            padding-top: 13px;
+                            width: 43px;
+                            height: 100%;
+                            right: 0;
+                            top: 0;
+                            background: #294453;
+                            cursor: pointer;
+                        }
+                        input {
+                            width: 100%;
+                            padding: 15px 12px;
+                            color: #757575;
+                            border: 0;
+                            background: #22353f;
+                        }
+                    }
+                }
+            }
+
+            &-flick {
+                flex-wrap: wrap;
+
+                &-images {
+                    width: 40%;
+                    margin-right: 16px;
+                    margin-bottom: 16px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .copyright {
+        padding-top: 47px;
+        padding-bottom: 47px;
+        text-align: center;
+        background: #22353f;
+        span {
+            color: $color-custom;
+        }
+       
+     
+    }
+}

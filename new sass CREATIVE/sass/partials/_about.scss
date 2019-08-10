@@ -1,0 +1,240 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: $font-base;
+    background: $bg-about url(../images/bg-about-1.jpg) center/cover no-repeat;
+
+      
+
+    @include screen(lg) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
+    
+    @include screen(lg) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__items {
+       
+        padding-bottom: 20px;
+        margin-right: auto;
+
+        @include screen(lg) {
+            padding-bottom: 50px;
+            width: 50%;
+        }
+
+        @include screen(xl) {
+            padding-bottom: 100px;
+        }
+    }
+
+    .tab {
+        max-width: 555px;
+        outline: 0;
+        height: 300px;
+        overflow: auto;
+        
+    }
+        &__img {
+            width: 100%; 
+
+            @include screen(lg) {
+              margin-right: auto;
+                width: 40%; 
+
+            }
+        }
+
+    .section-title {
+        padding-bottom: 50px;
+        color: #fff;
+        text-align: left;
+        margin-bottom: 40px;
+
+        &::before,
+        &::after {
+            left: 25%;
+        }
+
+        @include screen(md) {
+            margin-bottom: 60px;
+        }
+
+        @include screen(lg) {
+            margin-bottom: 70px;
+        }
+    }
+
+    &__item-tabset {
+        display: flex;
+        justify-content: flex-start;
+        
+        
+        .tab-list-home {
+            outline: 0;
+            min-height: 100px;
+        }
+
+        li:not(:last-child) {
+            margin-right: 22px;
+        }
+
+        a {
+            color: $color-btn;
+            font-size: 14px;
+            line-height: 2.6;
+            font-weight: bold;
+            border-top: 2px solid transparent;
+            transition: .3s;
+            margin-bottom: 40px;
+
+            @include screen(md) {
+                margin-bottom: 50px;
+            }
+    
+            @include screen(lg) {
+                margin-bottom: 60px;
+            }
+         
+            &:hover {
+                border-top-color: $color-custom;
+                color: $color-custom;
+            }
+        }
+    }
+
+    &__item-text,
+    &__item-list {
+        color: $color-refs-nomain;     
+    }
+
+    &__item-text {
+        margin-bottom: 30px;
+
+        p {
+            margin-bottom: 50px;
+        }
+
+        @include screen(md) {
+            margin-bottom: 40px;
+        }
+
+        @include screen(lg) {
+            margin-bottom: 50px;
+        }
+
+    }
+
+    &__item-list {
+        @include screen(md) {
+            columns: 2;
+        } 
+    }
+
+    &__item-list li {
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 10px;
+        line-height: 1.7;
+         
+        &::before {
+         content: '';
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: url(../images/icon-about-list.png) no-repeat;
+        }
+    }
+
+    .progress-list {
+        max-width: 555px;
+      
+        li {
+          position: relative;
+          margin-bottom: 14px;
+          padding: 14px 16px;
+          border: 1px solid #959595;
+          border-radius: 3px;
+          text-align: left;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: normal;
+          color: $color-btn;
+      
+          &:nth-child(1) {
+            .progress-list__line {
+              animation: 0.5s progress-first forwards;
+              background: #9c5da5;
+            }
+          }
+          &:nth-child(2) {
+            .progress-list__line {
+              animation: 0.5s progress-second forwards;
+              background: #11b0de;
+            }
+          }
+          &:nth-child(3) {
+            .progress-list__line {
+              animation: 0.5s progress-third forwards;
+              background: #d67f7f;
+            }
+          }
+          &:nth-child(4) {
+            .progress-list__line {
+              animation: 0.5s progress-fourth forwards;
+              background: #20bc9d;
+            }
+          }
+          &:nth-child(5) {
+            .progress-list__line {
+              animation: 0.5s progress-fifth forwards;
+              background: #bb8a36;
+            }
+          }
+        }
+      
+        &__text {
+          position: relative;
+          z-index: 2;
+        }
+      
+        &__line {
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          bottom: -1px;
+          border-radius: 3px;
+        }
+      }
+      
+      
+      
+      @keyframes progress-first {
+        @include progress-animation(72%);
+      }
+      
+      @keyframes progress-second {
+        @include progress-animation(85%);
+      }
+      
+      @keyframes progress-third {
+        @include progress-animation(67%);
+      }
+      
+      @keyframes progress-fourth {
+        @include progress-animation(90%);
+      }
+      
+      @keyframes progress-fifth {
+        @include progress-animation(84%);
+      }
+}

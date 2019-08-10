@@ -1,0 +1,219 @@
+.header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: $font-base;
+    background: $bg-header;
+
+    @include screen(lg) {
+      padding: 0;
+    }
+
+    &.sticky {
+      padding: 0;
+      background: rgba(68,67,62,0.85);
+      
+      .search {
+              padding-top: 17px;
+              padding-bottom: 17px;
+        }
+
+      .logo {
+        @include screen(lg) {
+          max-width: 100px;
+          padding: 0;
+        }
+      }
+      .navigation__item {
+        a {
+          
+            padding-top: 20px;
+            padding-bottom: 20px;
+          
+        }
+      }
+    }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+  // logo
+  .logo {
+    display: inline-block;
+    max-width: 18%;
+  }
+
+  // Navigation
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, $bg-header, rgb(136, 133, 133));
+    text-align: center;
+    text-transform: capitalize;
+
+    @include screen(lg) {
+      display: block !important;
+      width: auto;
+      position: static;
+      background: transparent;
+      margin-left: auto;
+      margin-right: 28px;
+    }
+
+    &__list {
+      @include screen(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+
+    &__item {
+      a {
+        position: relative;
+        display: block;
+        padding: 15px 10px;
+        font-size: 13px;
+        font-weight: bold;
+        color: $color-refs-nomain;
+        transition: .3s;
+
+        @include screen(lg) {
+          padding: 55px 9px;
+          border-bottom: 2px solid transparent;
+        }
+
+        &:hover {
+          @include screen(lg) {
+            color: #00cc99;
+            border-bottom-color: #00cc99;
+          }
+        }
+      }
+    }
+  }
+
+  // Burger
+  .burger {
+    position: relative;
+    display: inline-block;
+    width: 21px;
+    height: 15px;
+    margin-left: -15%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+
+    @include screen(lg) {
+      display: none;
+    }
+
+    span,
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #e8e8e8;
+    }
+
+    span {
+      top: 6px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      top: 0;
+    }
+
+    &::after {
+      top: 12px;
+    }
+  }
+
+  .search {
+    position: relative;
+    padding: 20px 0;
+    cursor: pointer;  
+
+    @include screen(md) {
+      padding-top: 35px;
+      padding-bottom: 35px
+    }
+
+    @include screen(lg) {
+      padding-top: 52px;
+      padding-bottom: 52px
+    }
+
+    &__form {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    width: 300px;
+
+    @include screen(md) {
+      width: 30vw;
+    }
+
+    @include screen(lg) {
+      width: 670px;
+    }
+
+      form input {
+        position: relative;
+        padding: 20px 18px;
+        width: 100%;
+        font: 13px $font-base;
+        border: 0;
+        outline: 0;
+        &::-webkit-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+        &::-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+        &:-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+        &:-ms-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+
+        &:focus::-webkit-input-placeholder { opacity: 0; }
+        &:focus:-moz-placeholder { opacity: 0; } 
+        &:focus::-moz-placeholder { opacity: 0; } 
+        &:focus:-ms-input-placeholder { opacity: 0; }
+    
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        width: 45px;
+        height: 45px;
+        background: #00cc99;
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 35%;
+        right: -5px;
+        width: 45px;
+        height: 45px;
+        background: url(../images/icon-search-white.png) no-repeat;
+        z-index: 2;
+      }
+    }
+      &:hover {
+        .search__form {
+        display: block;
+      }
+    }
+  }
+}

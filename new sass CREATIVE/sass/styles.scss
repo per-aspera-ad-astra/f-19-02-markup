@@ -1,0 +1,29 @@
+@import "helpers/vars";
+@import "helpers/mixins";
+@import "helpers/animate";
+// @import "helpers/slick";
+// @import "helpers/slick-theme";
+
+@import "base/base";
+@import "base/normalize";
+@import "base/_bootstrap-grid";
+@import "base/fontello";
+
+
+@import "partials/about";
+@import "partials/contact";
+@import "partials/copyright";
+@import "partials/facts";
+@import "partials/features";
+@import "partials/footer";
+@import "partials/header";
+@import "partials/home";
+@import "partials/news";
+@import "partials/options";
+@import "partials/pricing";
+@import "partials/purchase";
+@import "partials/purchase-bottom";
+@import "partials/service";
+@import "partials/team";
+@import "partials/testimonials";
+@import "partials/work";
