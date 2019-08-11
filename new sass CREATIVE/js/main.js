@@ -77,14 +77,14 @@ $(document).ready(function() {
     });
 
 
-    // GALLERY
-    var $items = $('.item:gt(5)');
-  $('.gallery').click(function() {
-    $items.slideToggle(300);
-    var $btn = $(this);
-    $btn.text($btn.text() == 'View less' ? '+ Load More' : 'View less');
-    $grid.isotope('layout');
-  });
+  //   // GALLERY
+  //   var $items = $('.item:gt(5)');
+  // $('.gallery').click(function() {
+  //   $items.slideToggle(300);
+  //   var $btn = $(this);
+  //   $btn.text($btn.text() == 'View less' ? '+ Load More' : 'View less');
+  //   // $grid.isotope('layout');
+  // });
 
 
     // isotope
@@ -94,7 +94,7 @@ $(document).ready(function() {
     // filter items on button click
     $('.filter-button-group').on( 'click', 'button', function() {
       var filterValue = $(this).attr('data-filter');
-      $grid.isotope('layout');
+      $grid.isotope({ filter: filterValue });
     });
 
     // page init tab
