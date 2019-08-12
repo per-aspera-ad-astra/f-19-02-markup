@@ -1,0 +1,150 @@
+.design {
+    background: url(../images/mac-bg.jpg)center/cover no-repeat;
+    padding: 50px 0 30px 0;
+    text-align: center;
+
+    @include screen(md) {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    @include screen(lg) {
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+    @include screen(xl) {
+        padding-top: 125px;
+    }
+
+    &-title {
+        padding-bottom: 20px;
+        @include screen(md) {
+            padding-bottom: 40px;
+         }
+         @include screen(lg) {
+             font-size: 90px;
+         }
+
+        h2 {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1.4;
+            @include screen(md) {
+               font-size: 24px;
+            }
+            @include screen(lg) {
+                font-size: 34px;
+            }
+            @include screen(xl) {
+                font-size: 36px;
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            color: $color-second;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1.5;
+            @include screen(md) {
+                font-size: 22px;
+            }
+            @include screen(lg) {
+                font-size: 32px;
+            }
+            @include screen(xl) {
+                font-size: 34px;
+            }
+        }
+    }
+
+    .container {
+        @include screen(md) {
+          margin: 0;
+          max-width: 360px;
+        }
+    }
+    &__inner {
+        position: relative;
+
+            @include screen(md) {
+                display: flex;
+                align-items: center;
+            }
+            @include screen(xl) {
+                align-items: flex-start;
+            }
+
+
+            &-img {
+                margin-bottom: 30px;
+
+                @include screen(md) {
+                    margin-bottom: 0;
+                    width: 65%;
+                   
+                 
+                }
+    
+                @include screen(xl) {
+                  margin-top: auto;
+                }
+                & img {
+                  width: 100%;
+                }
+            }
+
+            &-link {
+
+                @include screen(xl) {
+                    position: absolute;
+                    transform: translateX(256%);
+                }
+                @include screen(xxl) {
+                    margin-top: 120px;
+                    transform: translateX(400%);
+                }
+
+
+                &-head {
+                    display: flex;
+                   
+            }
+
+                &-img {
+                    display: grid;
+                    padding-bottom: 48px;
+    
+    
+                    }
+                    &-text {
+                        margin-left: 15px;
+                        text-align: left;
+                        & ul {
+                            margin-bottom: 50px;
+    
+                        }
+            }
+           
+
+           
+               
+                }
+
+              
+                &-list li {
+                    padding-bottom: 10px;
+
+                    @include screen(md) {
+                        padding-bottom: 15px;
+                    }
+                    
+                }
+                &-list p {
+                    color: #f7f7f7;
+                   
+                }
+            }
+           
+    }

@@ -1,0 +1,128 @@
+.pricing {
+    text-align: center;
+        padding: 50px 0;
+    
+        @include screen(md) {
+            padding: 70px 0;
+        }
+        @include screen(lg) {
+            padding: 100px 0
+        }
+        @include screen(xl) {
+            padding: 120px 0
+        }
+
+        &__inner {
+            padding: 0 10px;
+
+            @include screen(md) {
+                padding: 0 5px;
+            }
+            @include screen(lg) {
+                padding: 0 15px;
+            }
+        }
+
+        &-item {
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            padding: 0;
+
+
+            &-title {
+                padding: 22px 0;
+                color: #717171;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-bottom: 1px solid  #e1e1e1;
+
+                @include screen(md) {
+                    font-size: 20px;
+                }
+                @include screen(lg) {
+                    font-size: 20px;
+                }
+                @include screen(xl) {
+                    font-size: 24px;
+                }
+
+            }
+
+            &-text {
+                padding: 30px 0;
+                color: #fff;
+                background: #2e4a5b;
+
+                & h4 {
+                    font-weight: bold;
+                    font-size: 39px;
+                }
+
+                & span {
+                    font-size: 13.66px;
+                    font-weight: 300;
+                }
+            }
+
+            &-inner {
+                padding-top: 6px;
+
+                & li {
+                    line-height: 3.35;
+                    border-top: 1px solid #e1e1e1;
+                    font-weight: 600;
+                   
+                    &:last-child {
+                        border-bottom: 1px solid #e1e1e1;
+                    }
+                }
+            }
+
+            &-btn {
+                margin: 25px 0;
+            }
+            &-link {
+                display: inline-block;
+                width: 170px;
+                padding: 20px 0;
+                border-radius: 3px;
+                background: #2e4a5b;
+                color: #fff;
+                font-size: 13.66px;
+                font-weight: bold;
+                text-transform: uppercase;
+
+            }
+
+            &-offer {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: url(../images/offer.png);
+                    top: 29px;
+                    right: -32px;
+                    transform: translate(-50%,-50%);
+                    width: 62px;
+                    height: 61px;
+
+                }
+            }
+            &:hover {
+                box-shadow: 0 0 5px grey;
+            }
+
+            &:hover .pricing-item-title {
+                color: $color-second;
+            }
+            &:hover .pricing-item-text {
+                background: $color-second;
+            }
+            &:hover .pricing-item-link {
+                background: $color-second;
+            }
+        }
+        
+}

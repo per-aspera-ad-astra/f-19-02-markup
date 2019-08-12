@@ -1,0 +1,126 @@
+.header-slider {
+        .slick-prev,
+        .slick-next
+        {
+            font-size: 0;
+            line-height: 0;
+        
+            position: absolute;
+            top: 75%;
+            z-index: 5;
+        
+            display: block;
+        
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+        
+            cursor: pointer;
+        
+            color: #878787;
+            border: none;
+            outline: none;
+            background: #3c4140;
+        }
+        .slick-prev:hover,
+        .slick-prev:focus,
+        .slick-next:hover,
+        .slick-next:focus
+        {
+            color: #fff;
+            outline: none;
+            background: $color-second;
+        }
+        .slick-prev:hover:before,
+        .slick-prev:focus:before,
+        .slick-next:hover:before,
+        .slick-next:focus:before
+        {
+            opacity: 1;
+        }
+        .slick-prev.slick-disabled:before,
+        .slick-next.slick-disabled:before
+        {
+            opacity: .25;
+        }
+        
+        .slick-prev:before,
+        .slick-next:before
+        {
+            font-family: "fontello";
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 300;
+        
+            opacity: .75;
+            color: white;
+        
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .slick-prev
+        {
+            left: 0;
+        }
+        [dir='rtl'] .slick-prev
+        {
+            right: 25px;
+            left: auto;
+        }
+        .slick-prev:before
+        {
+            content: '\e802';
+        }
+        [dir='rtl'] .slick-prev:before
+        {
+            content: '\e802';
+        }
+        
+        .slick-next
+        {
+            right: 0;
+        }
+        [dir='rtl'] .slick-next
+        {
+            right: auto;
+            left: 25px;
+        }
+        .slick-next:before
+        {
+            content: '\e801';
+        }
+        [dir='rtl'] .slick-next:before
+        {
+            content: '\e801';
+        }
+    
+
+    width: 170px;
+    margin: auto;
+
+    @include screen(xxl) {
+        margin-left: 85%;
+        padding-bottom: 120px;
+    }
+
+
+    &-item-inner {
+    margin-bottom: 50px;
+        @include screen(lg) {
+            margin-bottom: 80px;
+        }
+        @include screen(xl) {
+            margin-bottom: 100px;
+        }
+
+    img {
+        max-width: 170px;
+        height: 105px;
+    }
+}
+    }
+

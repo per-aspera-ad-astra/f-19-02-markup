@@ -1,0 +1,109 @@
+.team {
+    padding: 50px 0;
+    text-align: center;
+
+    @include screen(md) {
+        padding: 70px 0;
+        
+    }
+    @include screen(lg) {
+        padding: 100px 0;
+    }
+    &__inner {
+
+        &-photo {
+            position: relative;
+        }
+        &-photo img {
+            width: 100%;
+        }
+
+        &-photo:hover .team__inner-bg {
+            opacity: 1;
+        }
+
+        &-bg {
+            position: absolute;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background: rgba(140,154,163,0.5);
+            color: #8a8a8a;
+            opacity: 0;
+            transition: opacity 0.4s;
+
+            & img {
+                margin-top: 75px;
+                width: 33%;
+            }
+    }
+    &-footer {
+        background: #2e4a5b;
+        border-top: 1px solid rgba(184,201,202,0.5);
+        border-right: 1px solid rgba(184,201,202,0.5);
+        border-left: 1px solid rgba(184,201,202,0.5);
+    }
+
+    &-name {
+        padding: 18px 0 18px 25px;
+        border-bottom: 1px solid #c7cfd3;
+        box-shadow: 0 1px 0 0px rgba(184,201,202,0.5);
+        text-align: left;
+
+        & h6 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            line-height: 2.4;
+        }
+        & p {
+            font-size: 13px;
+            color: $color-second;
+            font-weight: 300;
+        }
+        
+    }
+
+    &-link {
+
+        & a {
+            display: inline-block;
+            padding: 20px;
+            font-size: 20px;
+            color: #fff;
+            @include screen(md) {
+                padding: 22px;
+                font-size: 22px;
+            }
+            @include screen(lg) {
+                padding: 13px;
+                font-size: 16px;
+                
+            }
+            @include screen(xl) {
+                padding: 19px;
+                font-size: 18px;
+                
+            }
+
+
+            &:not(:first-child) {
+                border-left:  1px solid #c7cfd3;
+                box-shadow: -1px 0 rgba(184,201,202,0.5);
+            }
+            
+    }
+}
+            &:hover .team__inner-footer {
+                background: $color-second;
+            }
+            
+            &:hover .team__inner-name p {
+                color: #2e4a5b;
+            }
+
+}
+}

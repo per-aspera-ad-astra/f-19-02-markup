@@ -1,0 +1,48 @@
+.option {
+    text-align: center;
+    
+
+    &__inner {
+        padding-top: 95px;
+    padding-bottom: 115px;
+
+    &-blue {
+        color: $color-second;
+        background: #1c2a33;
+        border-top: 7px solid $color-second;
+        order: -1;
+
+        @include screen(md) {
+            order: 0;
+        }
+    }
+
+    &-green {
+        color: #fff;
+        background: $color-second;
+        border-top: 7px solid #fff;
+
+        & img {
+            margin-bottom: 20px;
+        }
+    }
+    }
+
+    &-img {
+        margin-bottom: 40px;
+    }
+
+
+    &-text {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include screen(lg) {
+            font-size: 15px;
+        }
+        @include screen(xl) {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.keep {
+    padding: 50px 0;
+    text-align: center;
+   
+    @include screen(md) {
+        display: flex;
+        padding: 70px 0;
+        text-align: left;
+        
+    }
+    @include screen(lg) {
+        padding: 100px 0;
+    }
+    @include screen(xl) {
+        padding: 125px 0;
+    }
+    
+      .container {
+        @include screen(md) {
+          margin: 0;
+          max-width: 360px;
+        }
+        @include screen(lg) {
+          max-width: 480px;
+        }
+        @include screen(xl) {
+          max-width: 570px;
+        }
+      }
+      &-map {
+        @include screen(md) {
+          width: 50%;
+        }
+    
+        img {
+          width: 100%;
+        }
+    }
+
+    &-title {
+        color: #4e4e4e;
+        margin-bottom: 80px;
+        margin-top: 30px;
+        @include screen(md) {
+          text-align: left;
+          margin-bottom: 120px;
+          margin-top: 0;
+  
+          &::before {
+            left: 30%;
+          }
+          &::after {
+              left: calc(30% + 13px);
+            }
+        }
+        @include screen(lg) {
+            &::before {
+                left: 23%;
+              }
+              &::after {
+                  left: calc(23% + 13px);
+                }
+        }
+        @include screen(xl) {
+            &::before {
+                left: 19%;
+              }
+              &::after {
+                  left: calc(19% + 13px);
+                }
+        }
+  
+      }
+      &-form {
+        @extend .keep-map;
+      }
+   
+}
+    .form {
+        width: 100%;
+        max-width: 555px;
+        font-weight: 300;
+  
+        @include screen(md) {
+          margin-left: auto;
+        }
+        input,
+        textarea,
+        button {
+            width: 100%;
+        }
+        input,
+        textarea {
+            color: #90aebd;
+            border: 1px solid #d7e2e0;
+            padding: 20px 16px 20px 16px;
+            font-weight: 300;
+            margin-bottom: 16px;
+            outline: none;
+
+            @include placeholder(inherit, 0);
+
+        }
+        textarea {
+            resize: none;
+        }
+         input:focus,
+         textarea:focus {
+            border-color: $color-second;
+        }
+}
+.keep-btn {
+    display: block;
+    padding: 20px 0;
+    background: $color-second;
+    border: 1px solid #d7e2e0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    border-bottom: 6px solid #08bf9b;
+    outline: none;
+
+    &:hover {
+        background: $color-hover;
+        border-bottom: $color-hover;
+    }
+    
+
+
+}

@@ -1,0 +1,35 @@
+.fun {
+    &__inner {
+        padding-top: 70px;
+        padding-bottom: 45px;
+
+        &-green {
+            border-top-color: #25333c; 
+        }
+    }
+
+    &-text {
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: capitalize;
+        }
+    
+        &-span {
+        padding-bottom: 20px;
+
+
+        span {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 400;
+        }
+    }
+    &-green p {
+        color: #25333c;
+    }
+}
+&-img img {
+    margin-bottom: 0;
+}
+}

@@ -1,0 +1,50 @@
+.creative {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include screen(md) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    &__inner {
+        text-align: center;
+        padding-top: 40px;
+
+        @include screen(md) {
+            text-align: left;
+            padding-top: 70px;
+        } 
+
+        &-item {
+            display: flex;
+          
+        }
+    }
+
+    &-link {
+        margin-left: 20px;
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #717171;
+        transition: 0.4s;
+
+        &:hover {
+            color: $color-second;
+        }
+
+        @include screen(md) {
+            font-size: 14px;
+        }
+        @include screen(lg) {
+            font-size: 18px;
+        }
+
+    }
+    &-img {
+        margin-bottom: 15px;
+    }
+    &__inner-text p {
+        line-height: 1.7;
+    }
+}

@@ -1,0 +1,101 @@
+.service {
+    padding: 50px 0;
+    text-align: center;
+
+    @include screen(md) {
+        padding: 70px 0;
+    }
+    @include screen(lg) {
+        padding: 100px 0;
+    }
+    &-tabset {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+       
+    
+    & li a {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        color: #717171;
+        font-weight: 600;
+        margin-bottom: 15px;
+        width: 192px;
+        padding: 25px 0;
+        border: 1px solid #ebebeb;
+
+        @include screen(md) {
+            margin-bottom: 25px;
+        }
+
+
+
+            &.active:hover::after {
+                content: '\e805';
+                position: absolute;
+                bottom: -45%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 23px;
+                color: $color-second;
+                font-family: "fontello";
+                    }
+
+                    &:hover {
+                        background:  $color-second;
+                        color: #fff;
+                    }
+        }
+
+    }
+
+    &-tab-inner {
+
+        @include screen(md) {
+
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &-img {
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            @include screen(md) {
+                width: 33%;
+                margin: 0;
+            }
+
+            @include screen(xl) {
+                width: 192px;
+                margin-left: 10px;
+            }
+        
+            & img {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            @include screen(md) {
+                width: 63%;
+                text-align: left;
+            }
+
+            @include screen(xl) {
+                width: 81%;
+            }
+
+             p {
+                font-size: 13.66;
+                font-weight: 300;
+                line-height: 1.78;
+            }
+    
+        }
+        
+    }
+
+}

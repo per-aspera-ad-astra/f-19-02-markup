@@ -1,0 +1,278 @@
+.clients-slider {
+    background: url(../images/slider-bg.jpg)center/cover, no-repeat;
+    padding: 50px 0;
+    text-align: center;
+
+    @include screen(md) {
+        padding: 70px 0;
+        
+    }
+    @include screen(lg) {
+        padding: 100px 0;
+    }
+
+    &-title {
+        color: #fff;
+        margin-bottom: 150px;
+        
+    @include screen(lg) {
+        margin-bottom: 170px;
+}
+}
+   
+    &-text {
+       
+        margin-bottom: 25px;
+
+       
+        &-inner {
+            position: relative;
+            margin-bottom: 20px;
+    
+            @include screen(md) {
+                margin-bottom: 40px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -50px;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: $color-second;
+                background: url(../images/slider2.png);
+                width: 44px;
+                height: 30px;
+            }
+        }
+    
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+    &-title {
+        font-size: 16px;
+        line-height: 1.7;
+        color: $color-second;
+        text-transform: uppercase;
+
+        @include screen(md) {
+            margin-bottom: 10px;
+        }
+
+        & span {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+}
+    }
+    &-inner {
+        width: 166px;
+        margin: auto;
+        background: url(../images/slider.png)center no-repeat;
+       
+    }
+    &-img {
+       width: 130px;
+       margin: 20px auto;
+       
+    }
+
+    /* Arrows */
+    & .slick-prev,
+    & .slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 225px;
+
+    display: block;
+    
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: #bbbbbb;
+    border: 1px solid #bbbbbb;
+    outline: none;
+    background: transparent;
+}
+& .slick-prev:hover,
+& .slick-prev:focus,
+& .slick-next:hover,
+& .slick-next:focus
+{
+    color: #fff;
+    outline: none;
+    background: $color-second;
+}
+& .slick-prev:hover:before,
+& .slick-prev:focus:before,
+& .slick-next:hover:before,
+& .slick-next:focus:before
+{
+    opacity: 1;
+}
+& .slick-prev.slick-disabled:before,
+& .slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+& .slick-prev:before,
+& .slick-next:before
+{
+    font-family: 'fontello';
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 300;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+& .slick-prev
+{
+    left: -130px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+& .slick-prev:before
+{
+    content: '\e802';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+& .slick-next
+{
+    right: -130px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+& .slick-next:before
+{
+    content: '\e801';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+& .slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+& .slick-dots
+{
+    position: absolute;
+    bottom: -65px;
+
+    display: block;
+    color: #878787;
+
+    width: 100%;
+    padding: 0;
+    margin: 0 30px;
+
+    list-style: none;
+
+    text-align: center;
+}
+& .slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+& .slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: #878787;
+    border: 0;
+    outline: none;
+    background: #2b5f62;
+    border-radius: 50%;
+}
+& .slick-dots li button:hover,
+& .slick-dots li button:focus
+{
+    outline: none;
+}
+& .slick-dots li button:hover:before,
+& .slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+& .slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 50px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: #878787;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+& .slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color:#878787;
+    border: 1px solid #27d4b2;
+    border-radius: 50%;
+}
+
+}
