@@ -203,4 +203,67 @@
           transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: translate3d(0, 10px, 0) rotate(-45deg); }
         }
+        .search {
+          position: relative;
+          margin: auto -15px;
+
+          @include screen(md) {
+            margin-left: 20px;
+          }
+        }
+        .search {
         
+        &-open {
+          padding: 5px 10px;
+          border: 0;
+          background: transparent;
+          color: inherit;
+          font-weight: 600;
+          font-size: 25px;
+          cursor: pointer;
+          outline: 0;
+        }
+        
+        &-form {
+          display: none;
+          position: absolute;
+          right: 15px;
+          top: 180%;
+          border: none;
+          outline: none;
+         
+
+          @include screen(md) {
+            top: 200%;
+          }
+        }
+        
+        &-form.open {
+          display: block;
+        }
+        
+        &-form input {
+          padding: 20px 50px 20px 10px;
+          width: 250px;
+          outline: none;
+          border: none;
+
+        }
+        &-form-inner {
+          position: relative;
+
+          &::before {
+            content: '\e800';
+            position: absolute;
+            font-family: 'Fontello';
+            top: 50%;
+            right: -6%;
+            transform: translate(-50%,-50%);
+            background: $color-second;
+            padding: 10px;
+            color: #fff;
+            font-size: 20px; 
+          }
+        }
+      }
+      

@@ -3,6 +3,9 @@ $(document).ready(function() {
       $(this).toggleClass('is-active');
       $('.navigation').toggleClass('open');
     });
+    $('.search-open').on('click', function() {
+      $('.search-form').toggleClass('open');
+    })
 
     new WOW().init();
 
@@ -21,25 +24,28 @@ $(document).ready(function() {
         mobileFirst: true,
         responsive: [
           {
-            breakpoint: 992,
+            breakpoint: 850,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              arrows: true
+              arrows: true,
+              dots: false
             }
           },
           {
             breakpoint: 760,
            settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              dots: true
             }
           },
           {
             breakpoint: 320,
             settings: {
              slidesToShow: 1,
-             slidesToScroll: 1
+             slidesToScroll: 1,
+             dots: true
             }
           }
          // You can unslick at a given breakpoint now by adding:
@@ -69,7 +75,7 @@ $(document).ready(function() {
            settings: {
               slidesToShow: 1,
               // slidesToScroll: 1,
-              arrows: true,
+              arrows: false,
               dots: true
             }
           },

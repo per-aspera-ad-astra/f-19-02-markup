@@ -98,6 +98,10 @@
       font-size: 16px;
       
     }
+    &.active {
+      color: $color-second;
+      border-top: 2px solid $color-second;
+    }
       
 
     &:hover {

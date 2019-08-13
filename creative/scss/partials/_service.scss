@@ -31,7 +31,8 @@
 
 
 
-            &.active:hover::after {
+            &.active:hover::after,
+            &.active::after {
                 content: '\e805';
                 position: absolute;
                 bottom: -45%;
@@ -40,6 +41,11 @@
                 font-size: 23px;
                 color: $color-second;
                 font-family: "fontello";
+                    }
+
+                    &.active {
+                        background:  $color-second;
+                        color: #fff;
                     }
 
                     &:hover {

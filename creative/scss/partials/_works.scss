@@ -55,6 +55,12 @@
     margin-bottom: 20px;
     outline: none;
     transition: 0.5s;
+    
+    &.active {
+        color: $color-second;
+        border-top: 2px solid $color-second;
+    }
+
 
     &:hover {
         color: $color-second;
