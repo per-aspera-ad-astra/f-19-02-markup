@@ -1,0 +1,132 @@
+.features {
+    font-family: $font-base;
+
+    .section-title {
+        margin-bottom: 40px;
+
+        @include screen(md) {
+            margin-bottom: 55px;
+        }
+        @include screen(lg) {
+            margin-bottom: 65px;
+        }
+    }
+
+    .section__item-wrapper {
+        padding: 0 20px 30px; 
+        
+        @include screen(md) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @include screen(lg) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        &:first-child { 
+            h4::before {
+                background: url(../images/icon-features-1.png) no-repeat;
+            }
+        }
+
+        &:nth-child(2) { 
+            h4::before {
+                background: url(../images/icon-features-2.png) no-repeat;
+            }
+        }
+        
+        &:nth-child(3) { 
+            h4::before {
+                background: url(../images/icon-features-3.png) no-repeat;
+            }
+        }
+
+        &:nth-child(4) { 
+            h4::before {
+                background: url(../images/icon-features-4.png) no-repeat;
+            }
+        }
+
+        &:nth-child(5) { 
+            h4::before {
+                background: url(../images/icon-features-5.png) no-repeat;
+            }
+        }
+
+        &:nth-child(6) { 
+            h4::before {
+                background: url(../images/icon-features-6.png) no-repeat;
+            }
+        }
+
+        &:nth-child(7) { 
+            h4::before {
+                background: url(../images/icon-features-7.png) no-repeat;
+            }
+        }
+
+        &:nth-child(8) { 
+            h4::before {
+                background: url(../images/icon-features-8.png) no-repeat;
+            }
+        }
+
+        &:last-child { 
+            margin: 0 auto;
+            h4::before {
+                background: url(../images/icon-features-9.png) no-repeat;
+            }
+        }
+    }
+    
+    .section__item {            
+        &-text {
+            font-weight: 300; 
+            font-size: 12px;
+            line-height: 1.8;
+         
+
+            @include screen(sm) {
+                font-size: 14px;
+             }
+        }
+        
+        &:hover h4 {
+            color: $color-custom;
+        }
+    }
+
+    h4 {
+        position: relative;
+        padding-left: 42px;
+        vertical-align: top;
+        font-weight: bold; 
+        font-size: 16px;
+        line-height: 2.2;
+        text-transform: capitalize;
+        color: $color-title-small;
+        transition: .3s;
+
+        @include screen(sm) {
+           font-size: 18px;
+        }
+
+        @include screen(md) {
+            font-size: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 33px;
+            height: 30px;
+            padding: 0;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);                
+        }
+
+    }
+}

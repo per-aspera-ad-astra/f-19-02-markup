@@ -1,0 +1,161 @@
+.testimonials {
+    font-family: $font-base;
+    background: #2e404d url(../images/bg-testimonials.png) center/cover no-repeat;
+    text-align: center;
+
+    .section-title {
+            color: $color-btn;
+            margin-bottom: 40px;
+            
+            @include screen (md) {
+                margin-bottom: 50px;
+            }
+    
+            @include screen (lg) {
+                margin-bottom: 60px;
+            }
+        }
+    
+
+    .quotes {
+        margin: 0 auto 43px;
+    }
+
+    h5 {
+        padding-top: 30px;
+
+        @include screen (md) {
+            padding-top: 40px;
+        }
+
+        @include screen (lg) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__slider {
+        max-width: 555px;
+        margin: 0 auto;
+
+        .slick-list {
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        .slick-dots {
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+            max-width: 555px;
+        }
+
+        .slick-dots li {
+            width: 50px;
+            height: 50px;
+            border: 3px solid $color-custom;
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px rgba(43,95,98,0.8);
+            transition: .3s;
+
+            @include screen(lg) {
+            width: 67px;
+            height: 67px;
+            box-shadow: 0 0 0 7px rgba(43,95,98,0.8);
+            }
+
+            &:first-child {
+                background: url(../images/img-slider-2.jpg) center/cover no-repeat;
+            }
+            &:nth-child(2) {
+                background: url(../images/img-slider-1.jpg) center/cover no-repeat;
+            }
+            &:nth-child(3) {
+                background: url(../images/img-slider-3.jpg) center/cover no-repeat;
+            }
+            &:last-child {
+                background: url(../images/img-slider-4.jpg) center/cover no-repeat;
+            }
+        }
+
+        .slick-dots li.slick-active  {
+            transform: translateY(-50%);
+            }
+
+            .slick-prev,
+            .slick-next {
+                color: transparent;
+                padding-left: 10px;
+                padding-top: 7px;
+                top: 100%;
+                width: 30px;
+                height: 30px;
+                background: rgba(0,204,153,0);
+                border: 1px solid #fff;
+                
+                &:hover {
+                    background: rgba(0,204,153,1);
+                }
+            }
+
+            .slick-prev::before,
+            .slick-next::before {
+                color: transparent;
+                font-size: 23px;
+            }
+
+            .slick-prev::before {
+                background: url(../images/prev-arrow.png) no-repeat;
+
+                .slick-prev:hover {
+                    background: $color-custom;
+                    z-index: 1;
+                }
+                    
+            }
+
+            .slick-next::before {
+             background: url(../images/next-arrow.png) no-repeat;
+               
+            }
+        
+
+        &-item {
+            outline: 0;
+            &_img {
+                width: 134px;
+                height: 134px;
+                margin: 0 auto;
+
+                img {
+                    width: 100;
+                    height: 125px;
+                    border: 3px solid $color-custom;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 11px rgba(43,95,98,0.8);
+                }
+            }
+
+            &_text {
+                margin-bottom: 25px;
+
+                p {
+                    color: #bbb;
+                }
+
+                .sign {
+                    margin-bottom: 14px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $color-custom;
+                }
+                span {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $color-btn;
+                }
+            }
+        }
+    }
+    
+}

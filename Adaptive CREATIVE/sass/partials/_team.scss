@@ -1,0 +1,118 @@
+.team {
+    font-family: $font-base;
+
+    .section-title {
+            margin-bottom: 40px;
+
+            @include screen(md) {
+                margin-bottom: 55px;
+            }
+            @include screen(lg) {
+                margin-bottom: 65px;
+            }
+        }
+
+    &__item {
+
+        margin-bottom: 20px;
+
+        &:hover {
+
+            .team__item-member,
+            .team__item-social {
+            
+                background: $color-custom;
+            }
+            .team__item-img_hover {
+                opacity: 1;
+            }
+            
+            p {
+                color: #2e4a5b;
+            }
+
+            img {
+                filter: brightness(50%);
+            }
+        }
+
+        &-img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_hover {
+                position: absolute;
+                font-size: 75px;
+                line-height: 1;
+                color: $color-custom;
+                width: 80px;
+                height: 80px;
+                background: #fff;
+                border: 5px solid #8c9aa3;
+                box-shadow: 0 0 0 2px $color-custom;
+                border-radius: 50%;
+                text-align: center;
+                opacity: 0;
+                transition: .3s;
+                z-index: 1;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-member,
+        &-social {
+            background: #2e4a5b;
+            transition: .3s;
+        }
+
+        &-member {
+            padding-top: 22px;
+            padding-bottom: 18px;
+            padding-left: 25px;
+            h4 {
+                font-size: 16px;
+                font-weight: bold;
+                color: $color-btn;
+                margin: 0;
+                padding-bottom: 16px;
+            }
+            p {
+                font-size: 13px;
+                font-weight: 300;
+                color: $color-custom;
+            }
+
+            border-bottom: 1px solid #a9b4bb;
+        }
+
+        &-social {
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                padding-top: 22px;
+                padding-bottom: 22px; 
+                width: 25%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:not(:last-child) {
+                border-right: 1px solid #a9b4bb;
+                }
+            }
+        }
+        
+        i {
+            color: $color-btn;           
+        }
+    }
+}
+
+
+    
